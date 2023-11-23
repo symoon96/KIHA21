@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+    파일정의 : 레이아웃
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    @공통
+-------------------------------------------------------------------*/
+#skip-nav {height:0}
+#skip-nav a {display: block; position: absolute; left: 0; top: -100px; width: 100%; height: 1px; text-align: center}
+#skip-nav a:focus, #skip a:active {position: absolute; top: 0; z-index: 120; height: 25px; padding: 10px 0; font-size: 1.4em; font-weight: 700; color: #36348f; background: #fff;}
+
+/*-------------------------------------------------------------------
+    @header
+-------------------------------------------------------------------*/
+#header {}
+#header.on {}
+#header .container {max-width: 87rem;}
+
+.logo {width: 14.7rem; height: 3.5rem; background: url('../img/common/logo.png') no-repeat center; background-size: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%)}
+.logo a { display: block; width: 100%; height: 100%; text-indent: -9999px; }
+
+.gnb {position: relative;}
+.gnb::before {content: ""; width: 100vw; height: 1px; background: #7f7f7f; position: absolute; top: 0; left: 50%; transform: translateX(-50%)}
+.gnb ul.depth01 {display: flex; align-items: center; justify-content: center;}
+.gnb ul.depth01 > li {flex: 1 0; position: relative; z-index: 2;}
+.gnb ul.depth01 > li > a {display: block; font-size: 1.7rem; font-weight: 500; color: #080808; text-align: center; line-height: 1.177; padding: 2rem 0; transition: all 0.3s;}
+.gnb ul.depth01 > li.on::before,
+.gnb ul.depth01 > li:hover::before {content: ""; width: 100%; height: 2px; background-color: #cc1313; position: absolute; left: 0; top: 0;}
+.gnb ul.depth01 > li.on > a,
+.gnb ul.depth01 > li:hover > a {color: #cc1313;}
+
+.gnb ul.depth02 {position: absolute; display: none; align-items: center; justify-content: center; background-color: #313131; width: 100vw; left: 50%; top:100%; transform: translateX(-50%);}
+
+.gnb ul.depth01 > li.on > ul.depth02 {display: flex;}
+
+.btn-menu {width: 3.2rem; height: 3rem; background: url('../img/icon/ic_menu.png') no-repeat center; background-size: 100%; position: absolute; right: 4rem; top: 50%; transform: translateY(-50%); display: none;}
+
+.btn-close {width: 2.6rem; height: 2.6rem; background: url('../img/icon/ic_close.png') no-repeat center; background-size: 100%; position: absolute; left: 3rem; top: 2.4rem; display: none;}
+
+.branding {height: 7.2rem; position: relative; display: flex; align-items: center; justify-content: center;}
+.branding .headline {text-align: center; font-size: 2.3rem; font-weight: 800;}
+ 
+/*-------------------------------------------------------------------
+    @footer
+-------------------------------------------------------------------*/
+#footer{}
+
+.link{}
+
+.family{}
+
+.sns{}
+
+.address{}
+
+.logo-f{}
+
+.copyright{}
+
+.fnb {}
+ 
+/*-------------------------------------------------------------------
+    @content
+-------------------------------------------------------------------*/
+#content{}
+
+.container{ margin-left: auto; margin-right: auto; position: relative; padding-left: 4rem; padding-right: 4rem; max-width: 117rem; width: 100%;}
+
+.has-padding{}
+
+/*-------------------------------------------------------------------
+    @floating
+-------------------------------------------------------------------*/
+ 
+/*-------------------------------------------------------------------
+    @popup
+-------------------------------------------------------------------*/
+.popup{}
+
+.popup .pop-head{}
+
+.popup .pop-cont{}
+
+.popup .pop-footer{}
+
+.dim {position: fixed; z-index: 9; width: 100vw; height: 100vh; background-color: #000000; opacity: 0.6; top: 0; left: 0;}
+
+@media screen and (max-width: 1170px) {
+    /*-------------------------------------------------------------------
+        @header
+    -------------------------------------------------------------------*/
+    #header {height: 7.5rem;}
+    #header .container {max-width: 100%; height: 7.5rem; position: fixed; z-index: 9; left: 0; top: 0;}
+
+    .logo {width: 25.9rem; height: 4.1rem; background: url('../img/common/logo_m.png') no-repeat center; background-size: 100%;}
+
+    .branding {height: 7.5rem;}
+    .branding .headline {display: none;}
+
+    .gnb {position: fixed; width: 55rem; right: 0; top: 0; padding-top: 7.5rem; min-height: 100vh; z-index: 999; background-color: #ffffff; transform: translateX(100%); transition: all 0.3s;}
+    .gnb::before {display: none;}
+    .gnb ul.depth01 {overflow: auto; height: calc(100vh - 7.5rem); display: block; padding: 0 4.5rem;}
+    .gnb ul.depth01 > li + li {border-top: 1px solid #c9c9c9;}
+    .gnb ul.depth01 > li > a {font-size: 1.7rem; font-weight: 800; text-align: left; line-height: 1.177; padding: 1.6rem 0;}
+    .gnb ul.depth01 > li.on::before,
+    .gnb ul.depth01 > li:hover::before {display: none;}
+
+    .gnb ul.depth02 {display: block; width: 100%; padding: 0.8rem 0; background-color: transparent; position: static; transform: translateX(0); border-top: 1px solid #c9c9c9;}
+    .gnb ul.depth02 > li > a {padding: 0.4rem 1.5rem; font-size: 1.7rem; line-height: 2; color: #000000; font-weight: 200; display: block;}
+
+    .btn-menu {display: block;}
+    .btn-close {display: block;}
+}
+
+@media screen and (max-width: 750px) {
+    /*-------------------------------------------------------------------
+        @header
+    -------------------------------------------------------------------*/
+    #header {height: 12rem;}
+    #header .container {height: 12rem;}
+
+    .branding {height: 12rem;}
+
+    .logo {width: 41.5rem; height: 6.6rem;}
+
+    .gnb {padding-top: 12rem;}
+    .gnb ul.depth01 {height: calc(100vh - 12rem);}
+    .gnb ul.depth01 > li > a {font-size: 2.7rem; line-height: 1.1112; padding: 2.7rem 0;}
+
+    .gnb ul.depth02 {padding: 1.2rem 0;}
+    .gnb ul.depth02 > li > a {padding: 0.6rem 2.4rem; font-size: 2.7rem;}
+
+    .btn-menu {width: 5.2rem; height: 4.7rem;}
+    .btn-close {width: 4.2rem; height: 4.2rem; left: 4.5rem; top: 3.9rem;}
+}
