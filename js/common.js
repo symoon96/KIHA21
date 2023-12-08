@@ -12,6 +12,16 @@ $(document).ready(function(){
             gnb()
         }
     })
+
+    subNav();
+
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 0) {
+            $('#header').addClass('scroll')
+        } else {
+            $('#header').removeClass('scroll')
+        }
+    })
 })
 
 // 메뉴
@@ -70,4 +80,18 @@ function bodyHidden() {
 // body scroll auto
 function bodyAuto() {
     $('body').css('overflow', '')
+}
+
+// 서브 네비게이션
+function subNav(){
+    let subNavWidth = new Array;
+    let maxWidth;
+
+    $('.sub .sub-nav ul li').each(function(){
+        subNavWidth.push($(this).outerWidth())
+    });
+
+    maxWidth = Math.max(...subNavWidth);
+
+    $('.sub .sub-nav ul li').css('width', maxWidth)
 }

@@ -150,11 +150,12 @@
     @Only (Display 스타일은 다양하므로 숨길경우만 사용)
 -------------------------------------------------------------------*/
 /* Device */
-.dv-pc .hide-pc, 
-.dv-pad .hide-pad,
-.dv-mobile .hide-mobile,
-.dv-android .hide-android, 
-.dv-ios .hide-ios {display:none !important;}
+.hide-pc {display:none !important;}
+
+@media screen and (max-width: 750px) {
+    .show-mobile {display: block !important;}
+    .hide-mobile {display: none !important;}
+}
  
 /* Media */
 @media screen { .hide-screen {display:none !important;} }
