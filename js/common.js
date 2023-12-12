@@ -3,6 +3,8 @@ $(document).ready(function(){
 
     if(windowWidth <= 1170) {
         gnb()
+    } else {
+        subNav();
     }
 
     $(window).resize(function(){
@@ -10,10 +12,10 @@ $(document).ready(function(){
         
         if(windowWidth <= 1170) {
             gnb()
+        } else {
+            subNav();
         }
     })
-
-    subNav();
 
     $(window).scroll(function(){
         if($(window).scrollTop() > 0) {
@@ -53,7 +55,7 @@ function dimMakerinHeader() {
     if($('body').find('.dim').length > 0){
         return;
     }
-    $('#header .container').append('<div class="dim"></div>');
+    $('#header').append('<div class="dim"></div>');
     bodyHidden();
 }
 

@@ -23,11 +23,11 @@
 
 .main .section01{}
 
-/* @media screen and (max-width: 1170px) {
+@media screen and (max-width: 1170px) {
     .main .visual {position: relative; height: calc(100vh - 7.5rem);}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 7.5rem);}
 }
 @media screen and (max-width: 750px) {
     .main .visual {position: relative; height: calc(100vh - 12rem);}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 12rem);}
-} */
+}
