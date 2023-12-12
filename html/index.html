@@ -17,6 +17,7 @@
     <!-- dist/css -->
     <link href="../dist/css/aos.css" rel="stylesheet" type="text/css">
     <link href="../dist/css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="../dist/css/jquery.fullPage.css" rel="stylesheet" type="text/css">
 
     <!-- custom css -->
     <link href="../css/common.css" rel="stylesheet" type="text/css">
@@ -31,6 +32,9 @@
     <script src="../dist/js/aos.js"></script>
     <script src="../dist/js/swiper-bundle.min.js"></script>
     <script src="../dist/js/jquery.rwdImageMaps.min.js"></script>
+    <script src="../dist/js/scrolloverflow.js"></script>
+    <script src="../dist/js/jquery.fullPage.js"></script>
+    <script src="../dist/js/jquery.fullpage.extensions.min.js"></script>
     
     <!-- custom js -->
     <script src="../js/common.js"></script>
@@ -47,14 +51,16 @@
 
     <!-- header -->
     <div id="header">
-        <div class="container">
-            <div class="branding">
+        <div class="branding">
+            <div class="container">
                 <h1 class="logo">
                     <a href="javascript:void(0);">대한산업보건협회</a>
                 </h1>
                 <h2 class="headline">대한산업보건협회 e-역사관</h2>
             </div>
-            <div class="gnb">
+        </div>
+        <div class="gnb">
+            <div class="container">
                 <button class="btn-close"></button>
                 <ul class="depth01">
                     <li>
@@ -82,9 +88,9 @@
                     <li><a href="javascript:void(0);">찾아보는 역사</a></li>
                 </ul>
             </div>
-
-            <button class="btn-menu"></button>
         </div>
+
+        <button class="btn-menu"></button>
     </div>
     <!-- // header -->
 
@@ -97,19 +103,7 @@
                 <p class="copyright">COPYRIGHT©2023 KIHA. ALL RIGHTS RESERVED 대한산업보건협회</p>
             </div>
             <div class="visual-background">
-                <div class="swiper visual-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="../img/main/img_visual01.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/main/img_visual02.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../img/main/img_visual03.png" alt="">
-                        </div>
-                    </div>
-                </div>
+                <video src="../img/main/main_bg_pc.mp4" muted autoplay playsinline loop></video>
             </div>
         </div>
     </div>
