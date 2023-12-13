@@ -53,12 +53,12 @@
 .history {position: relative;}
 .history .history-headline {background-color: #e1ded5; background-repeat: no-repeat; height: calc(100vh - 12rem); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;}
 .history .history-headline.bg01 {background-image: url('../img/sub/bg_history_headline01.png'); background-position: calc(50% + 31.6rem); background-size: 64.4rem;}
-.history .history-headline.bg02 {background-image: url('../img/sub/bg_history_headline02.png'); background-position: calc(50% + 33.3rem); background-size: 75.5rem;}
+.history .history-headline.bg02 {background-image: url('../img/sub/bg_history_headline02.png'); background-position: calc(50% + 33.3rem); background-size: 57.5rem;}
 .history .history-headline.bg03 {background-image: url('../img/sub/bg_history_headline03.png'); background-position: calc(50% + 34.9rem); background-size: 45.2rem;}
 .history .history-headline.bg04 {background-image: url('../img/sub/bg_history_headline04.png'); background-position: calc(50% + 32rem); background-size: 55.9rem;}
 .history .history-headline.bg05 {background-image: url('../img/sub/bg_history_headline05.png'); background-position: calc(50% + 32.6rem); background-size: 63.6rem;}
 .history .history-headline.bg06 {background-image: url('../img/sub/bg_history_headline06.png'); background-position: calc(50% + 36.5rem); background-size: 59.5rem;}
-.history .history-headline.bg07 {background-image: url('../img/sub/bg_history_headline07.png'); background-position: calc(50% + 34.5rem) bottom; background-size: 67.5rem;}
+.history .history-headline.bg07 {background-image: url('../img/sub/bg_history_headline07.png'); background-position: calc(50% + 36.5rem) bottom; background-size: 67rem;}
 .history .history-headline.bg08 {background-image: url('../img/sub/bg_history_headline08.png'); background-position: calc(50% + 40rem) bottom; background-size: 54.9rem;}
 .history .history-headline .headline {width: 102rem; margin: 0 auto;}
 .history .history-headline .headline .year-headline {font-size: 20rem; font-weight: 100; line-height: 1; font-family: 'Gotham';}
@@ -157,39 +157,42 @@
 
 .message .congrats {padding-top: 16rem; padding-bottom: 15rem; width: calc(100% + 8rem); margin-left: -4rem; margin-right: -4rem; background: url('../img/sub/bg_congrats_pc.png') no-repeat center; background-size: cover;}
 .message .congrats img {margin: 0 auto;}
+.message .congrats .pop-view {position: fixed; bottom: 0; width: 100%; left: 0; width: 100%; height: 100vh; background-color: rgba(125, 125, 125, 0.9);}
+.message .congrats .pop-view .inner {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
 
 /* 숫자로 보는 성장 */
 *:has(.growth) #header {position: fixed; z-index: 9; width: 100%; top: 0;}
 .growth #fullpage .section {min-height: 81rem;}
 .growth #fullpage .section01 {background: url('../img/sub/bg_growth01.png') no-repeat center; background-size: cover;}
 .growth #fullpage .section01 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10.5rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
+.growth #fullpage .section01 .container > img {width: 40rem;}
 .growth #fullpage .section01 .animation-area .line-chart {position: relative; background: url('../img/sub/bg_growth01_02.png') no-repeat center; background-size: 100%; width: 71.9rem; height: 44rem; margin: 0 auto;}
-.growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 7.6rem; transition: all 1s;}
-.growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.5rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text02 {left: 16.4rem; transition-delay: 0.3s;}
-.growth #fullpage .section01 .animation-area .line-chart .text03 {left: 32.1rem; transition-delay: 0.5s;}
-.growth #fullpage .section01 .animation-area .line-chart .text04 {left: 48.1rem; transition-delay: 0.7s;}
-.growth #fullpage .section01 .animation-area .line-chart .text05 {left: 64.2rem; transition-delay: 0.9s;}
-.growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {width: 1px; height: 0; background-color: #15fc16; position: absolute; bottom: 4rem; transition: all 1s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin01 {left: 4.3rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin02 {left: 20.1rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin03 {left: 36rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin04 {left: 51.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin05 {left: 67.8rem;}
+.growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 17.273%; transition: all 1s; font-family: 'Gotham';}
+.growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.7%;}
+.growth #fullpage .section01 .animation-area .line-chart .text02 {left: 22.81%; transition-delay: 0.3s;}
+.growth #fullpage .section01 .animation-area .line-chart .text03 {left: 44.646%; transition-delay: 0.5s;}
+.growth #fullpage .section01 .animation-area .line-chart .text04 {left: 66.899%; transition-delay: 0.7s;}
+.growth #fullpage .section01 .animation-area .line-chart .text05 {left: 89.3%; transition-delay: 0.9s;}
+.growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {width: 1px; height: 0; background-color: #15fc16; position: absolute; bottom: 9.091%; transition: all 1s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin01 {left: 5.981%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin02 {left: 27.956%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin03 {left: 50.07%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin04 {left: 72.184%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin05 {left: 94.298%;}
 .growth #fullpage .section01 .animation-area .line-chart .line {overflow: hidden; width: 0; height: 100%; transition: all 1.2s; transition-delay: 1.2s;}
 .growth #fullpage .section01 .animation-area .line-chart .line img {max-width: none; width: 71.9rem}
 
-.growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 9.4rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 17.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 22.2rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 27.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text05.ani {bottom: 41.2rem;}
+.growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 21.364%;}
+.growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 40.682%;}
+.growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 50.455%;}
+.growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 63.41%;}
+.growth #fullpage .section01 .animation-area .line-chart .text05.ani {bottom: 93.637%;}
 
-.growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 1.8rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 11.3rem; transition-delay: 0.3s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 15.1rem; transition-delay: 0.5s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 20.4rem; transition-delay: 0.7s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 35rem; transition-delay: 0.9s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 4.091%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 25.682%; transition-delay: 0.3s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 34.319%; transition-delay: 0.5s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 46.364%; transition-delay: 0.7s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 79.546%; transition-delay: 0.9s;}
 
 .growth #fullpage .section01 .animation-area .line-chart .line.ani {width: 100%; transition-delay: 1.2s;}
 
@@ -202,29 +205,29 @@
 .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix02 .half02 {border: 1.8rem solid #ff0032; border-right: 0; border-top-left-radius: 1000rem; border-bottom-left-radius: 1000rem; transform-origin: right; transform: rotate(180deg); transition: all 0.4s; width: 100%; height: 100%; transition-delay: 0.4s;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {width: 10.2rem; height: 20.4rem; top: 16rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01 {right: 16rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {width: 15.5265%; height: 38.346%; top: 30.076%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01 {right: 24.354%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {width: 14.2rem; height: 28.4rem; top: 12rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01 {right: 12rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {width: 21.614%; height: 53.384%; top: 22.557%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01 {right: 18.265%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {width: 18.2rem; height: 36.4rem; top: 8rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01 {right: 8rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {width: 27.702%; height: 68.422%; top: 15.038%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01 {right: 12.177%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {width: 22.2rem; height: 44.4rem; top: 4rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01 {right: 4rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {width: 33.79%; height: 83.459%; top: 7.519%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01 {right: 6.089%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {width: 26.2rem; height: 52.6rem; top: 0;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {width: 39.878%; height: 98.873%; top: 0;}
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix01 {right: 0;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle01.ani .fix01 .half01 {transform: rotate(121deg);}
 
@@ -240,33 +243,34 @@
 
 .growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover;}
 .growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 11rem 0; padding-top: 13.2rem;}
+.growth #fullpage .section03 .animation-area {width: 100%;}
 .growth #fullpage .section03 .animation-area .bar-chart {position: relative; background: url('../img/sub/img_growth03_02.png') no-repeat center; background-size: 100%; width: 77.7rem; height: 33.6rem; margin: 0 auto;}
-.growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #ffe516; position: absolute; left: 8.8rem; transition: all 1s;}
-.growth #fullpage .section03 .animation-area .bar-chart [class^="bar"] {width: 0; height: 1.8rem; left: 7.1rem; position: absolute; background-color: #ffe516; transition: all 1.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #ffe516; position: absolute; left: 11.326%; transition: all 1s;}
+.growth #fullpage .section03 .animation-area .bar-chart [class^="bar"] {width: 0; height: 5.358%; left: 9.138%; position: absolute; background-color: #ffe516; transition: all 1s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 5.8rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 12rem; transition-delay: 0.1s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 18.2rem; transition-delay: 0.3s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 24.3rem; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 30.5rem; transition-delay: 0.7s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 17.262%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 35.715%; transition-delay: 0.1s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 54.1667%; transition-delay: 0.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 72.322%; transition-delay: 0.5s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 90.774%; transition-delay: 0.7s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .bar01 {top: 6.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar02 {top: 13.1rem; transition-delay: 0.1s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar03 {top: 19.2rem; transition-delay: 0.3s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 25.4rem; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 31.4rem; transition-delay: 0.7s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar01 {top: 20.536%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar02 {top: 38.989%; transition-delay: 0.1s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar03 {top: 57.143%; transition-delay: 0.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 77.596%; transition-delay: 0.5s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 93.453%; transition-delay: 0.7s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .text01.ani {left: 18.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text02.ani {left: 27rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text03.ani {left: 33.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text04.ani {left: 43.7rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text05.ani {left: 68.8rem;}
+.growth #fullpage .section03 .animation-area .bar-chart .text01.ani {left: 24.325%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text02.ani {left: 34.75%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text03.ani {left: 43.63%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text04.ani {left: 56.242%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text05.ani {left: 88.546%;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .bar01.ani {width: 10.1rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar02.ani {width: 18.3rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar03.ani {width: 25.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar04.ani {width: 35rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 60rem;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar01.ani {width: 12.999%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar02.ani {width: 23.553%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar03.ani {width: 33.334%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar04.ani {width: 45.046%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 77.221%;}
 
 #fp-nav ul li a span {background-color: #ffffff;}
 
@@ -405,6 +409,36 @@
     .message .congrats {padding-top: 16rem; padding-bottom: 15rem; width: calc(100% + 8rem); margin-left: -4rem; margin-right: -4rem; background: url('../img/sub/bg_congrats_pc.png') no-repeat center; background-size: cover;}
     .message .congrats img {margin: 0 auto;}
 
+    /* 숫자로 보는 성장 */
+    .growth #fullpage .container {min-height: 100vh;}
+    .growth #fullpage .section01 .container {gap: 13rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
+    .growth #fullpage .section01 .container > img {width: 38rem;}
+    .growth #fullpage .section01 .animation-area .line-chart {width: 41.5rem; height: 29.5rem; margin: 0 auto;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 1.4rem; bottom: 17.273%;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {bottom: 14%;}
+    .growth #fullpage .section01 .animation-area .line-chart .line {overflow: hidden; width: 0; height: 100%; transition: all 1.2s; transition-delay: 1.2s;}
+    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 41.5rem}
+
+    .growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 32%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 47%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 56%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 70%;}
+
+    .growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 12%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 30%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 38%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 48%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 75%;}
+
+    .growth #fullpage .section02 .container {gap: 8.5rem 0;}
+    .growth #fullpage .section02 .container > img {width: 43.8rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart {width: 37.8rem; height: 30.6rem; margin: 0 auto;}
+
+    .growth #fullpage .section03 .container {gap: 11.5rem 0; padding-top: 13.2rem;}
+    .growth #fullpage .section03 .container > img {width: 26rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart {width: 44.8rem; height: 19.4rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 1.4rem;}
+
     /* 찾아보는 역사 */
     .media ul {flex-direction: column; gap: 6rem 0}
 }
@@ -453,4 +487,32 @@
     .message .greeting .cont .president .name {font-size: 2.4rem; font-weight: 500;}
 
     .message .congrats {padding-top: 11.5rem; padding-bottom: 34.6rem; background: url('../img/sub/bg_congrats_mobile.png') no-repeat center; background-size: cover;}
+
+    /* 숫자로 보는 성장 */
+    .growth #fullpage .section01 .container {gap: 19.5rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
+    .growth #fullpage .section01 .container > img {width: 57rem;}
+    .growth #fullpage .section01 .animation-area .line-chart {width: 62rem; height: 37.9rem; margin: 0 auto;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2rem; bottom: 17.273%;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {bottom: 8%;}
+    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 62rem}
+
+    .growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 21%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 40%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 49%;}
+    .growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 67%;}
+
+    .growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 6%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 24%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 35%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 48%;}
+    .growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 80%;}
+
+    .growth #fullpage .section02 .container {gap: 12.5rem 0;}
+    .growth #fullpage .section02 .container > img {width: 65.6rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart {width: 56.7rem; height: 45.9rem; margin: 0 auto;}
+
+    .growth #fullpage .section03 .container {gap: 17rem 0;}
+    .growth #fullpage .section03 .container > img {width: 39rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart {width: 67rem; height: 29.1rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2rem;}
 }
