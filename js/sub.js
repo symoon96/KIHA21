@@ -2,6 +2,11 @@ var windowWidth = window.innerWidth;
 var changeSwiper = undefined;
 var magazineSwiper = undefined;
 
+$(window).on('load', function(){
+
+    $(window).scrollTop(0);
+})
+
 $(document).ready(function(){
     initChangeSwiper();
     initMagazineSwiper();
@@ -11,15 +16,12 @@ $(document).ready(function(){
 
     let topBlank = $('.gnb').outerHeight() + $('.timeline').outerHeight();
 
-    $(window).scrollTop(0);
-
     let aniTarget1 = $('.growth #fullpage .section01 .animation-area > div > *')
     let aniTarget2 = $('.growth #fullpage .section02 .animation-area > div > *')
     let aniTarget3 = $('.growth #fullpage .section03 .animation-area > div > *')
 
     $('#fullpage').fullpage({
         responsiveSlides: true,
-        responsiveWidth: 1110,
         responsiveHeight: 810,
         navigation: true,
         scrollOverflow: true,
@@ -95,6 +97,27 @@ $(document).ready(function(){
             }
         })
     })
+
+    messageSet();
+
+    $('html').click(function(e){
+        if($(e.target).is('.inner') && $(e.target).parents('.pop-view')){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+        }
+    });
+
+    if($('body').find('.pop-view').length > 0){
+        $('.pop-view').remove();
+        $('body').css('overflow', '')
+    }
+
+    if (windowWidth <= 1170) {
+        if($('body').find('.pop-view').length > 0){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+        }
+    }
 })
 
 function progress(thisScrollTop, thisHeight, scrolltop){
@@ -117,6 +140,13 @@ function progress(thisScrollTop, thisHeight, scrolltop){
 
 $(window).on('resize', function () {
     windowWidth = window.innerWidth;
+
+    if (windowWidth <= 1170) {
+        if($('body').find('.pop-view').length > 0){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+        }
+    }
     initChangeSwiper();
     initMagazineSwiper();
 });
@@ -168,5 +198,21 @@ function initMagazineSwiper() {
     } else if (windowWidth <= 1170 && magazineSwiper != undefined) {
         magazineSwiper.destroy();
         magazineSwiper = undefined;
+    }
+}
+
+function messageSet(){
+    $('.message .congrats map area').each(function(){
+        $(this).attr('onclick', 'popViewMessage(' + ($(this).index() + 1) + ')')
+    })
+}
+
+function popViewMessage(target) {
+    if($('.congrats').find('.pop-view').length <= 0) {
+        $('.congrats').append(
+            '<div class="pop-view"><div class="inner"><img src="../img/sub/img_congrats' + target + '.png" class="img"></div></div>'
+        );
+
+        $('body').css('overflow', 'hidden')
     }
 }
