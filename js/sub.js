@@ -278,7 +278,7 @@ $(document).ready(function(){
     });
 
     $('.timeline ul li a').click(function(){
-        $('html').animate({scrollTop: $('.history-detail').eq($(this).closest('li').index()).offset().top}, 1000)
+        $('html').animate({scrollTop: $('.history-headline').eq($(this).closest('li').index()).offset().top}, 1000)
     })
 
     // 역사 하이라이트
