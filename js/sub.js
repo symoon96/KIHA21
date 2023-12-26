@@ -280,7 +280,7 @@ $(document).ready(function(){
     $('.timeline ul li a').click(function(){
         $('html').animate({scrollTop: $('.history-detail').eq($(this).closest('li').index()).offset().top}, 1000)
     })
-    $('.history-headline').height($(window).innerHeight() - $('#header').height())
+    // $('.history-headline').height($(window).innerHeight() - $('#header').height())
     // 역사 하이라이트
     $(window).scroll(function(){
         const viewportHeight = $(window).height();
