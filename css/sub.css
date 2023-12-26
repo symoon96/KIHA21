@@ -56,20 +56,12 @@
 .history {position: relative;}
 .history .history-headline {background-color: #e1ded5; background-repeat: no-repeat; height: calc(100vh - 12rem); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;}
 .history .history-headline.bg01 {background-image: url('../img/sub/bg_history_headline01.png'); background-position: calc(50% + 31.6rem); background-size: 64.4rem;}
-<<<<<<< HEAD
 .history .history-headline.bg02 {background-image: url( ../img/sub/bg_history_headline02.png ); background-position: calc(50% + 33.3rem); background-size: 57.5rem;}
-=======
-.history .history-headline.bg02 {background-image: url('../img/sub/bg_history_headline02.png'); background-position: calc(50% + 33.3rem); background-size: 57.5rem;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 .history .history-headline.bg03 {background-image: url('../img/sub/bg_history_headline03.png'); background-position: calc(50% + 34.9rem); background-size: 45.2rem;}
 .history .history-headline.bg04 {background-image: url('../img/sub/bg_history_headline04.png'); background-position: calc(50% + 32rem); background-size: 55.9rem;}
 .history .history-headline.bg05 {background-image: url('../img/sub/bg_history_headline05.png'); background-position: calc(50% + 32.6rem); background-size: 63.6rem;}
 .history .history-headline.bg06 {background-image: url('../img/sub/bg_history_headline06.png'); background-position: calc(50% + 36.5rem); background-size: 59.5rem;}
-<<<<<<< HEAD
 .history .history-headline.bg07 {background-image: url( ../img/sub/bg_history_headline07.png ); background-position: calc(50% + 36.5rem); background-size: 67rem;}
-=======
-.history .history-headline.bg07 {background-image: url('../img/sub/bg_history_headline07.png'); background-position: calc(50% + 36.5rem) bottom; background-size: 67rem;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 .history .history-headline.bg08 {background-image: url('../img/sub/bg_history_headline08.png'); background-position: calc(50% + 40rem) bottom; background-size: 54.9rem;}
 .history .history-headline .headline {width: 102rem; margin: 0 auto;}
 .history .history-headline .headline .year-headline {font-size: 20rem; font-weight: 100; line-height: 1; font-family: 'Gotham';}
@@ -169,12 +161,7 @@
 
 .message .congrats {padding-top: 16rem; padding-bottom: 15rem; width: calc(100% + 8rem); margin-left: -4rem; margin-right: -4rem; background: url('../img/sub/bg_congrats_pc.png') no-repeat center; background-size: cover;}
 .message .congrats img {margin: 0 auto;}
-<<<<<<< HEAD
 .message .congrats .pop-view {position: fixed; bottom: 0; width: 100%; left: 0; width: 100%; height: 100vh; background-color: rgba(125, 125, 125, 0.9);} .message .congrats .pop-view .inner {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
-=======
-.message .congrats .pop-view {position: fixed; bottom: 0; width: 100%; left: 0; width: 100%; height: 100vh; background-color: rgba(125, 125, 125, 0.9);}
-.message .congrats .pop-view .inner {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
 /* 숫자로 보는 성장 */
 *:has(.growth) #header {position: fixed; z-index: 9; width: 100%; top: 0;}
@@ -189,15 +176,9 @@
 .growth #fullpage .section01 {background: url('../img/sub/bg_growth01.png') no-repeat center; background-size: cover;}
 .growth #fullpage .section01 .container > img {width: 40rem;}
 .growth #fullpage .section01 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10.5rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
-.growth #fullpage .section01 .container > img {width: 40rem;}
 .growth #fullpage .section01 .animation-area .line-chart {position: relative; background: url('../img/sub/bg_growth01_02.png') no-repeat center; background-size: 100%; width: 71.9rem; height: 44rem; margin: 0 auto;}
-<<<<<<< HEAD
 .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 7.273%; transition: all 1s; font-family: 'Gotham';}
 .growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.696%;}
-=======
-.growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 17.273%; transition: all 1s; font-family: 'Gotham';}
-.growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.7%;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 .growth #fullpage .section01 .animation-area .line-chart .text02 {left: 22.81%; transition-delay: 0.3s;}
 .growth #fullpage .section01 .animation-area .line-chart .text03 {left: 44.646%; transition-delay: 0.5s;}
 .growth #fullpage .section01 .animation-area .line-chart .text04 {left: 66.899%; transition-delay: 0.7s;}
@@ -251,11 +232,7 @@
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01,
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {width: 33.79%; height: 83.459%; top: 7.519%;}
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01 {right: 6.089%;}
-<<<<<<< HEAD
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right:39.878%;}
-=======
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right: 39.878%;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix01,
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {width: 39.878%; height: 98.873%; top: 0;}
@@ -274,43 +251,24 @@
 .growth #fullpage .section02 .animation-area .circle-chart .circle05.ani .fix01 .half01 {transform: rotate(0deg);}
 .growth #fullpage .section02 .animation-area .circle-chart .circle05.ani .fix02 .half02 {transform: rotate(90deg);}
 
-<<<<<<< HEAD
 .growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover; padding-top: 6.5rem;}
 .growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 11rem 0; position: relative;}
 .growth #fullpage .section03 .container .animation-area {width: 100%}
-=======
-.growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover;}
-.growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 11rem 0; padding-top: 13.2rem;}
-.growth #fullpage .section03 .animation-area {width: 100%;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 .growth #fullpage .section03 .animation-area .bar-chart {position: relative; background: url('../img/sub/img_growth03_02.png') no-repeat center; background-size: 100%; width: 77.7rem; height: 33.6rem; margin: 0 auto;}
 .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #ffe516; position: absolute; left: 11.326%; transition: all 1s;}
 .growth #fullpage .section03 .animation-area .bar-chart [class^="bar"] {width: 0; height: 5.358%; left: 9.138%; position: absolute; background-color: #ffe516; transition: all 1s;}
 
-<<<<<<< HEAD
 .growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 18.162%;}
 .growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 36.715%; transition-delay: 0.1s;}
 .growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 55.1667%; transition-delay: 0.3s;}
 .growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 73.022%; transition-delay: 0.5s;}
 .growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 91.774%; transition-delay: 0.7s;}
-=======
-.growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 17.262%;}
-.growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 35.715%; transition-delay: 0.1s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 54.1667%; transition-delay: 0.3s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 72.322%; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 90.774%; transition-delay: 0.7s;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
 .growth #fullpage .section03 .animation-area .bar-chart .bar01 {top: 20.536%;}
 .growth #fullpage .section03 .animation-area .bar-chart .bar02 {top: 38.989%; transition-delay: 0.1s;}
 .growth #fullpage .section03 .animation-area .bar-chart .bar03 {top: 57.143%; transition-delay: 0.3s;}
-<<<<<<< HEAD
 .growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 75.596%; transition-delay: 0.5s;}
 .growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 93.953%; transition-delay: 0.7s;}
-=======
-.growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 77.596%; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 93.453%; transition-delay: 0.7s;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
 .growth #fullpage .section03 .animation-area .bar-chart .text01.ani {left: 24.325%;}
 .growth #fullpage .section03 .animation-area .bar-chart .text02.ani {left: 34.75%;}
@@ -322,11 +280,7 @@
 .growth #fullpage .section03 .animation-area .bar-chart .bar02.ani {width: 23.553%;}
 .growth #fullpage .section03 .animation-area .bar-chart .bar03.ani {width: 33.334%;}
 .growth #fullpage .section03 .animation-area .bar-chart .bar04.ani {width: 45.046%;}
-<<<<<<< HEAD
 .growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 77.211%;}
-=======
-.growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 77.221%;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
 @keyframes slide-up-fade-in{
     0% {
@@ -491,7 +445,6 @@
     .message .congrats img {margin: 0 auto;}
 
     /* 숫자로 보는 성장 */
-<<<<<<< HEAD
     .growth #fullpage .section {min-height: 100vh;}
     .growth #fullpage .section01 .container {gap: 13rem 0;}
     .growth #fullpage .section01 .container > img {width: 38rem;}
@@ -515,37 +468,6 @@
     #fp-nav ul li {width: 1.4rem; height: 1.4rem; padding: 0.3rem 0.3rem;}
     #fp-nav ul li a.active {height: 1.4rem;}
 
-=======
-    .growth #fullpage .container {min-height: 100vh;}
-    .growth #fullpage .section01 .container {gap: 13rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
-    .growth #fullpage .section01 .container > img {width: 38rem;}
-    .growth #fullpage .section01 .animation-area .line-chart {width: 41.5rem; height: 29.5rem; margin: 0 auto;}
-    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 1.4rem; bottom: 17.273%;}
-    .growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {bottom: 14%;}
-    .growth #fullpage .section01 .animation-area .line-chart .line {overflow: hidden; width: 0; height: 100%; transition: all 1.2s; transition-delay: 1.2s;}
-    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 41.5rem}
-
-    .growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 32%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 47%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 56%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 70%;}
-
-    .growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 12%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 30%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 38%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 48%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 75%;}
-
-    .growth #fullpage .section02 .container {gap: 8.5rem 0;}
-    .growth #fullpage .section02 .container > img {width: 43.8rem;}
-    .growth #fullpage .section02 .animation-area .circle-chart {width: 37.8rem; height: 30.6rem; margin: 0 auto;}
-
-    .growth #fullpage .section03 .container {gap: 11.5rem 0; padding-top: 13.2rem;}
-    .growth #fullpage .section03 .container > img {width: 26rem;}
-    .growth #fullpage .section03 .animation-area .bar-chart {width: 44.8rem; height: 19.4rem;}
-    .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 1.4rem;}
-
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
     /* 찾아보는 역사 */
     .media ul {flex-direction: column; gap: 6rem 0}
 }
@@ -613,7 +535,6 @@
     .message .congrats {padding-top: 11.5rem; padding-bottom: 34.6rem; background: url('../img/sub/bg_congrats_mobile.png') no-repeat center; background-size: cover;}
 
     /* 숫자로 보는 성장 */
-<<<<<<< HEAD
     .growth #fullpage .section01 .container {gap: 19.5rem 0;}
     .growth #fullpage .section01 .container > img {width: 57rem;}
     .growth #fullpage .section01 .animation-area .line-chart {width: 62rem; height: 37.9rem;}
@@ -625,41 +546,14 @@
     .growth #fullpage .section02 .animation-area .circle-chart {width: 56.7rem; height: 45.9rem;}
     .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix01 .half01 {border-width: 1.5rem;}
     .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix02 .half02 {border-width: 1.5rem;}
-=======
-    .growth #fullpage .section01 .container {gap: 19.5rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
-    .growth #fullpage .section01 .container > img {width: 57rem;}
-    .growth #fullpage .section01 .animation-area .line-chart {width: 62rem; height: 37.9rem; margin: 0 auto;}
-    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2rem; bottom: 17.273%;}
-    .growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {bottom: 8%;}
-    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 62rem}
-
-    .growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 21%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 40%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 49%;}
-    .growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 67%;}
-
-    .growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 6%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 24%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 35%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 48%;}
-    .growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 80%;}
-
-    .growth #fullpage .section02 .container {gap: 12.5rem 0;}
-    .growth #fullpage .section02 .container > img {width: 65.6rem;}
-    .growth #fullpage .section02 .animation-area .circle-chart {width: 56.7rem; height: 45.9rem; margin: 0 auto;}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4
 
     .growth #fullpage .section03 .container {gap: 17rem 0;}
     .growth #fullpage .section03 .container > img {width: 39rem;}
     .growth #fullpage .section03 .animation-area .bar-chart {width: 67rem; height: 29.1rem;}
     .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2rem;}
-<<<<<<< HEAD
 
     #fp-nav {width: 3.5rem;}
     #fp-nav ul {padding: 1.2rem 0.8rem; gap: 3rem 0;}
     #fp-nav ul li {width: 2rem; height: 2rem; padding: 0.5rem 0.5rem;}
     #fp-nav ul li a.active {height: 2rem;}
 }
-=======
-}
->>>>>>> dbe2821c52bf549cd10507c51aa557e61e0795f4

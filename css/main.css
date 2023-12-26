@@ -27,8 +27,6 @@
     .main .visual .visual-background video.pc {display: none;}
     .main .visual .visual-background video.mobile {display: block;}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 7.5rem);}
-    .main .visual .visual-background video.pc {display: none;}
-    .main .visual .visual-background video.mobile {display: block;}
 }
 @media screen and (max-width: 750px) {
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 12rem);}
