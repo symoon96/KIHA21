@@ -278,7 +278,7 @@ $(document).ready(function(){
     });
 
     $('.timeline ul li a').click(function(){
-        $('html').animate({scrollTop: $('.history-headline').eq($(this).closest('li').index()).offset().top}, 1000)
+        $('html').animate({scrollTop: $('.history-detail').eq($(this).closest('li').index()).offset().top}, 1000)
     })
 
     // 역사 하이라이트
@@ -286,13 +286,13 @@ $(document).ready(function(){
         const viewportHeight = $(window).height();
         const scrolltop = $(window).scrollTop();
         
-        $('.history-headline').each(function(){
+        $('.history-detail').each(function(){
             let thisScrollTop = $(this).offset().top;
-            let thisContHeight = $(this).next().height();
-            let totalHeight = $(this).height() + $(this).next().height();
+            // let thisContHeight = $(this).next().height();
+            let totalHeight = $(this).height();
             let detailIdx = $('.history-headline').index(this)
 
-            if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop <  $(this).next().offset().top + $(this).next().height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
+            if(scrolltop + topBlank >= thisScrollTop && scrolltop <  thisScrollTop + $(this).height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
                 $(this).next().addClass('on')
 
                 
