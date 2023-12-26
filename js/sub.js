@@ -16,10 +16,10 @@ $(document).ready(function(){
     let aniTarget1 = $('.growth #fullpage .section01 .animation-area > div > *')
     let aniTarget2 = $('.growth #fullpage .section02 .animation-area > div > *')
     let aniTarget3 = $('.growth #fullpage .section03 .animation-area > div > *')
+    let aniText
 
     $('#fullpage').fullpage({
         responsiveSlides: true,
-        responsiveWidth: 1110,
         responsiveHeight: 810,
         navigation: true,
         scrollOverflow: true,
@@ -33,12 +33,44 @@ $(document).ready(function(){
             }
 
             if(index == 1) {
-                aniTarget1.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .dim').addClass('ani')
+                }, 500);
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget3.addClass('ani'); 
+                }, 3500);
             } else if(index == 2) {
-                aniTarget2.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .dim').addClass('ani')
+                }, 500);
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget2.addClass('ani'); 
+                }, 3500);
             } else {
-                console.log(index)
-                aniTarget3.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .dim').addClass('ani')
+                }, 500);
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget1.addClass('ani'); 
+                }, 3500);
             }
         },
         
@@ -50,18 +82,54 @@ $(document).ready(function(){
             }
 
             if(index == 1) {
-                aniTarget1.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .dim').addClass('ani')
+                }, 500);
                 $('#header').removeClass('scroll')
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget3.addClass('ani'); 
+                }, 1500);
             } else if(index == 2) {
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .dim').addClass('ani')
+                }, 500);
 				$('#header').addClass('scroll')
-                aniTarget2.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget2.addClass('ani'); 
+                }, 3500);
             } else {
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .dim').addClass('ani')
+                }, 500);
 				$('#header').addClass('scroll')
-                console.log(index)
-                aniTarget3.addClass('ani'); 
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').addClass('ani')
+                }, 1500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').addClass('ani')
+                }, 2000);
+                setTimeout(() => {
+                    aniTarget1.addClass('ani'); 
+                }, 3500);
             }
         }
     });
+
+    $('.timeline ul li a').click(function(){
+        $('html').animate({scrollTop: $('.history-detail').eq($(this).closest('li').index()).offset().top}, 1000)
+    })
 
     // 역사 하이라이트
     $(window).scroll(function(){
@@ -95,6 +163,33 @@ $(document).ready(function(){
             }
         })
     })
+
+    messageSet();
+
+    $('html').click(function(e){
+        if($(e.target).is('.inner') && $(e.target).parents('.pop-view')){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+
+            $('#header').css('background-color', '')
+        }
+    })
+
+    if($('body').find('.pop-view').length > 0){
+        $('.pop-view').remove();
+        $('body').css('overflow', '')
+
+        $('#header').css('background-color', '')
+    }
+
+    if(windowWidth <= 1170){
+        if($('body').find('.pop-view').length > 0){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+
+            $('#header').css('background-color', '')
+        }
+    }
 })
 
 function progress(thisScrollTop, thisHeight, scrolltop){
@@ -117,6 +212,12 @@ function progress(thisScrollTop, thisHeight, scrolltop){
 
 $(window).on('resize', function () {
     windowWidth = window.innerWidth;
+    if(windowWidth <= 1170){
+        if($('body').find('.pop-view').length > 0){
+            $('.pop-view').remove();
+            $('body').css('overflow', '')
+        }
+    }
     initChangeSwiper();
     initMagazineSwiper();
 });
@@ -168,5 +269,23 @@ function initMagazineSwiper() {
     } else if (windowWidth <= 1170 && magazineSwiper != undefined) {
         magazineSwiper.destroy();
         magazineSwiper = undefined;
+    }
+}
+
+function messageSet() {
+    $('.message .congrats map area').each(function(){
+        $(this).attr('onclick', 'popViewMessage(' + ($(this).index() +1)+ ')')
+    })
+}
+
+function popViewMessage(target){
+    if($('.congrats').find('.pop-view').length <= 0){
+        $('.congrats').append(
+            '<div class="pop-view"><div class="inner"><img src="../img/sub/img_congrats' + target + '.png" class="img"></div></div>'
+        );
+
+        $('body').css('overflow', 'hidden');
+
+        $('#header').css('background-color', '#ffffff')
     }
 }

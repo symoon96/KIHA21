@@ -8,12 +8,15 @@
     @공통
 -------------------------------------------------------------------*/
 /* .sub {min-height: calc(100vh - 19.2rem)} */
-.sub .sub-nav {position: absolute; width: 100%; top: 0; left: 50%; transform: translateX(-50%); background-color: #313131; z-index: 1;}
+.sub {padding-top: 13.2rem;}
+*:has(#fullpage) .sub {padding-top: 0;}
+.sub .sub-nav {position: fixed; width: 100vw; top: 13.2rem; left: 50%; transform: translateX(-50%); background-color: #313131; z-index: 8; transition: all 0.3s;}
 .sub .sub-nav ul {display: flex; align-items: center; justify-content: center; justify-items: stretch;}
+.sub .sub-nav ul li {min-width: fit-content;}
 .sub .sub-nav ul li a {display: block; text-align: center; font-size: 1.5rem; color: #7d7d7d; padding: 2.1rem 3rem; line-height: 1.2;}
 .sub .sub-nav ul li.on a {color: #ffffff;}
 
-#header.scroll + .sub .sub-nav ul {position: fixed; top: 6rem;}
+#header.scroll + .sub .sub-nav {top: 6rem;}
 
 /* 서브 비쥬얼 */
 .sub-visual{}
@@ -37,7 +40,7 @@
     @메뉴명
 -------------------------------------------------------------------*/
 /* 역사 하이라이팅 */
-.timeline {position: absolute; z-index: 2; width: 100vw; top: 0; left: 50%; transform: translateX(-50%); background-color: #313131; z-index: 2; overflow: auto;}
+.timeline {position: fixed; top: 13.2rem; z-index: 2; width: 100vw; left: 50%; transform: translateX(-50%); background-color: #313131; z-index: 2; overflow: auto;}
 .timeline ul {display: flex; align-items: center; justify-content: center; position: relative;}
 .timeline ul li {position: relative;}
 .timeline ul li .line {width: calc(100% + 9rem); height: 1px; background-color: #464645; position: absolute; top: 3.9rem; left: 50%; z-index: 1;}
@@ -53,17 +56,17 @@
 .history {position: relative;}
 .history .history-headline {background-color: #e1ded5; background-repeat: no-repeat; height: calc(100vh - 12rem); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;}
 .history .history-headline.bg01 {background-image: url('../img/sub/bg_history_headline01.png'); background-position: calc(50% + 31.6rem); background-size: 64.4rem;}
-.history .history-headline.bg02 {background-image: url('../img/sub/bg_history_headline02.png'); background-position: calc(50% + 33.3rem); background-size: 75.5rem;}
+.history .history-headline.bg02 {background-image: url( ../img/sub/bg_history_headline02.png ); background-position: calc(50% + 33.3rem); background-size: 57.5rem;}
 .history .history-headline.bg03 {background-image: url('../img/sub/bg_history_headline03.png'); background-position: calc(50% + 34.9rem); background-size: 45.2rem;}
 .history .history-headline.bg04 {background-image: url('../img/sub/bg_history_headline04.png'); background-position: calc(50% + 32rem); background-size: 55.9rem;}
 .history .history-headline.bg05 {background-image: url('../img/sub/bg_history_headline05.png'); background-position: calc(50% + 32.6rem); background-size: 63.6rem;}
 .history .history-headline.bg06 {background-image: url('../img/sub/bg_history_headline06.png'); background-position: calc(50% + 36.5rem); background-size: 59.5rem;}
-.history .history-headline.bg07 {background-image: url('../img/sub/bg_history_headline07.png'); background-position: calc(50% + 34.5rem) bottom; background-size: 67.5rem;}
+.history .history-headline.bg07 {background-image: url( ../img/sub/bg_history_headline07.png ); background-position: calc(50% + 36.5rem); background-size: 67rem;}
 .history .history-headline.bg08 {background-image: url('../img/sub/bg_history_headline08.png'); background-position: calc(50% + 40rem) bottom; background-size: 54.9rem;}
 .history .history-headline .headline {width: 102rem; margin: 0 auto;}
 .history .history-headline .headline .year-headline {font-size: 20rem; font-weight: 100; line-height: 1; font-family: 'Gotham';}
 .history .history-headline .headline .title-headline {font-size: 3.3rem; font-weight: 900; margin-top: 3.5rem;}
-.history .history-headline .headline .text-headline {font-size: 1.7rem; font-weight: 300; line-height: 1.53; margin-top: 3rem; width: 51rem; text-align: justify; word-break: keep-all;}
+.history .history-headline .headline .text-headline {font-size: 1.7rem; font-weight: 300; line-height: 1.53; margin-top: 3rem; width: 51rem; text-align: left; word-break: break-all}
 
 .history .history-detail {display: flex; align-items: flex-start; justify-content: flex-start;}
 .history .history-detail .visual {width: 49rem; flex: none; min-height: calc(100vh - 12rem); /*position: sticky; left: 0; top: 12rem;*/ position: relative;}
@@ -99,6 +102,7 @@
 .history .history-detail:nth-of-type(6) .cont {padding-bottom: 15.2rem;}
 .history .history-detail:nth-of-type(8) .cont {padding-bottom: 15.2rem;}
 .history .history-detail:nth-of-type(10) .cont {padding-bottom: 18.2rem;}
+.history .history-detail:nth-of-type(10) .cont .inner ul li:nth-of-type(2) dl dd .img-area::before {width: 21.5rem; left: 4rem}
 .history .history-detail:nth-of-type(12) .cont {padding-bottom: 18.2rem;}
 .history .history-detail:nth-of-type(14) .cont {padding-bottom: 11rem;}
 .history .history-detail:nth-of-type(16) .cont {padding-bottom: 18rem;}
@@ -117,7 +121,7 @@
 .change .change-swiper .swiper-button-next {background-image: url('../img/icon/ic_swiper_next.png');}
 .change .change-swiper .swiper-pagination {top: auto; bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0 1rem;}
 .change .change-swiper .swiper-pagination .swiper-pagination-bullet {width: 1.6rem; height: 1.6rem; margin: 0; border: 1px solid transparent; background: radial-gradient(circle, rgba(147,149,152,1) 40%, rgba(255,255,255,1) 40%); opacity: 1;}
-.change .change-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {border-color: #939598;}
+.change .change-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {border-color: #cc1313; background: radial-gradient(circle, #cc1313 40%, rgba(255,255,255,1) 40%);}
 
 .change .magazine-swiper {padding-left: 5.5rem; padding-right: 5.5rem; max-width: 105.5rem; margin: 0 auto; position: relative; padding-bottom: 4rem;}
 .change .magazine-swiper .inner {border: 1px solid #626262; padding: 4rem 2rem 2.5rem}
@@ -131,7 +135,7 @@
 .change .magazine-swiper .swiper-button-next {background-image: url('../img/icon/ic_swiper_next.png');}
 .change .magazine-swiper .swiper-pagination {top: auto; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 0 1rem;}
 .change .magazine-swiper .swiper-pagination .swiper-pagination-bullet {width: 1.6rem; height: 1.6rem; margin: 0; border: 1px solid transparent; background: radial-gradient(circle, rgba(147,149,152,1) 40%, rgba(255,255,255,1) 40%); opacity: 1;}
-.change .magazine-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {border-color: #939598;}
+.change .magazine-swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {border-color: #cc1313; background: radial-gradient(circle, #cc1313 40%, rgba(255,255,255,1) 40%);}
 
 /* 함께 하는 축하메시지 > 협회장 메시지 */
 .message .greeting {max-width: 109rem; margin: 0 auto; padding-top: 13.5rem; padding-bottom: 12.5rem;}
@@ -142,7 +146,7 @@
 .message .greeting .headline .text-headline p::before,
 .message .greeting .headline .text-headline p::after {position: absolute; width: 2.5rem; height: 1.7rem; background-repeat: no-repeat; background-size: 100%; background-position: center; content: "";}
 .message .greeting .headline .text-headline p::before {background-image: url('../img/sub/img_double_quote_l.png'); left: 0; top: 0;}
-.message .greeting .headline .text-headline p::after {background-image: url('../img/sub/img_double_quote_r.png'); right: 0; bottom: 2.2rem;}
+.message .greeting .headline .text-headline p::after {background-image: url('../img/sub/img_double_quote_r.png'); right: 13.7rem; bottom: 1.8rem;}
 .message .greeting .headline .president {right: 11.5rem; overflow: hidden; bottom: 7.5rem; padding-top: 1rem}
 .message .greeting .headline .president > p {float: left;}
 .message .greeting .headline .president > p + p {margin-left: 1rem;}
@@ -157,39 +161,48 @@
 
 .message .congrats {padding-top: 16rem; padding-bottom: 15rem; width: calc(100% + 8rem); margin-left: -4rem; margin-right: -4rem; background: url('../img/sub/bg_congrats_pc.png') no-repeat center; background-size: cover;}
 .message .congrats img {margin: 0 auto;}
+.message .congrats .pop-view {position: fixed; bottom: 0; width: 100%; left: 0; width: 100%; height: 100vh; background-color: rgba(125, 125, 125, 0.9);} .message .congrats .pop-view .inner {display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;}
 
 /* 숫자로 보는 성장 */
 *:has(.growth) #header {position: fixed; z-index: 9; width: 100%; top: 0;}
-.growth #fullpage .section {min-height: 81rem;}
+.growth #fullpage .container {position: relative; z-index: 2;}
+.growth #fullpage .container .animation-area {opacity: 0; transition: all 1s}
+.growth #fullpage .container .animation-area.ani {opacity: 1;}
+.growth #fullpage .container > img {opacity: 0;}
+.growth #fullpage .container > img.ani {animation: slide-up-fade-in ease 1s; animation-iteration-count: 1; transform-origin: 50% 50%; animation-fill-mode:forwards;}
+.growth #fullpage .section {min-height: 100vh;}
+.growth #fullpage .section .dim {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #000000; opacity: 0; z-index: 1; transition: all 0.5s;}
+.growth #fullpage .section .dim.ani {opacity: 0.5;}
 .growth #fullpage .section01 {background: url('../img/sub/bg_growth01.png') no-repeat center; background-size: cover;}
+.growth #fullpage .section01 .container > img {width: 40rem;}
 .growth #fullpage .section01 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10.5rem 0; padding-top: 19.5rem; padding-bottom: 8.5rem;}
 .growth #fullpage .section01 .animation-area .line-chart {position: relative; background: url('../img/sub/bg_growth01_02.png') no-repeat center; background-size: 100%; width: 71.9rem; height: 44rem; margin: 0 auto;}
-.growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 7.6rem; transition: all 1s;}
-.growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.5rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text02 {left: 16.4rem; transition-delay: 0.3s;}
-.growth #fullpage .section01 .animation-area .line-chart .text03 {left: 32.1rem; transition-delay: 0.5s;}
-.growth #fullpage .section01 .animation-area .line-chart .text04 {left: 48.1rem; transition-delay: 0.7s;}
-.growth #fullpage .section01 .animation-area .line-chart .text05 {left: 64.2rem; transition-delay: 0.9s;}
-.growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {width: 1px; height: 0; background-color: #15fc16; position: absolute; bottom: 4rem; transition: all 1s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin01 {left: 4.3rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin02 {left: 20.1rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin03 {left: 36rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin04 {left: 51.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin05 {left: 67.8rem;}
+.growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #15fc16; position: absolute; bottom: 7.273%; transition: all 1s; font-family: 'Gotham';}
+.growth #fullpage .section01 .animation-area .line-chart .text01 {left: 0.696%;}
+.growth #fullpage .section01 .animation-area .line-chart .text02 {left: 22.81%; transition-delay: 0.3s;}
+.growth #fullpage .section01 .animation-area .line-chart .text03 {left: 44.646%; transition-delay: 0.5s;}
+.growth #fullpage .section01 .animation-area .line-chart .text04 {left: 66.899%; transition-delay: 0.7s;}
+.growth #fullpage .section01 .animation-area .line-chart .text05 {left: 89.3%; transition-delay: 0.9s;}
+.growth #fullpage .section01 .animation-area .line-chart [class^="thin"] {width: 1px; height: 0; background-color: #15fc16; position: absolute; bottom: 9.091%; transition: all 1s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin01 {left: 5.981%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin02 {left: 27.956%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin03 {left: 50.07%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin04 {left: 72.184%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin05 {left: 94.298%;}
 .growth #fullpage .section01 .animation-area .line-chart .line {overflow: hidden; width: 0; height: 100%; transition: all 1.2s; transition-delay: 1.2s;}
 .growth #fullpage .section01 .animation-area .line-chart .line img {max-width: none; width: 71.9rem}
 
-.growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 9.4rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 17.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 22.2rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 27.9rem;}
-.growth #fullpage .section01 .animation-area .line-chart .text05.ani {bottom: 41.2rem;}
+.growth #fullpage .section01 .animation-area .line-chart .text01.ani {bottom: 21.364%;}
+.growth #fullpage .section01 .animation-area .line-chart .text02.ani {bottom: 40.682%;}
+.growth #fullpage .section01 .animation-area .line-chart .text03.ani {bottom: 50.455%;}
+.growth #fullpage .section01 .animation-area .line-chart .text04.ani {bottom: 63.41%;}
+.growth #fullpage .section01 .animation-area .line-chart .text05.ani {bottom: 93.637%;}
 
-.growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 1.8rem;}
-.growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 11.3rem; transition-delay: 0.3s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 15.1rem; transition-delay: 0.5s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 20.4rem; transition-delay: 0.7s;}
-.growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 35rem; transition-delay: 0.9s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin01.ani {height: 4.091%;}
+.growth #fullpage .section01 .animation-area .line-chart .thin02.ani {height: 25.682%; transition-delay: 0.3s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin03.ani {height: 34.319%; transition-delay: 0.5s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin04.ani {height: 46.364%; transition-delay: 0.7s;}
+.growth #fullpage .section01 .animation-area .line-chart .thin05.ani {height: 79.546%; transition-delay: 0.9s;}
 
 .growth #fullpage .section01 .animation-area .line-chart .line.ani {width: 100%; transition-delay: 1.2s;}
 
@@ -202,29 +215,29 @@
 .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix02 .half02 {border: 1.8rem solid #ff0032; border-right: 0; border-top-left-radius: 1000rem; border-bottom-left-radius: 1000rem; transform-origin: right; transform: rotate(180deg); transition: all 0.4s; width: 100%; height: 100%; transition-delay: 0.4s;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {width: 10.2rem; height: 20.4rem; top: 16rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01 {right: 16rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {width: 15.5265%; height: 38.346%; top: 30.076%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix01 {right: 24.354%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle01 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {width: 14.2rem; height: 28.4rem; top: 12rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01 {right: 12rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {width: 21.614%; height: 53.384%; top: 22.557%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix01 {right: 18.265%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle02 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {width: 18.2rem; height: 36.4rem; top: 8rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01 {right: 8rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {width: 27.702%; height: 68.422%; top: 15.038%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix01 {right: 12.177%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle03 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {width: 22.2rem; height: 44.4rem; top: 4rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01 {right: 4rem;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {width: 33.79%; height: 83.459%; top: 7.519%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix01 {right: 6.089%;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle04 .fix02 {right:39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix01,
-.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {width: 26.2rem; height: 52.6rem; top: 0;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {width: 39.878%; height: 98.873%; top: 0;}
 .growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix01 {right: 0;}
-.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {right: 26.2rem;}
+.growth #fullpage .section02 .animation-area .circle-chart .circle05 .fix02 {right: 39.878%;}
 
 .growth #fullpage .section02 .animation-area .circle-chart .circle01.ani .fix01 .half01 {transform: rotate(121deg);}
 
@@ -238,37 +251,55 @@
 .growth #fullpage .section02 .animation-area .circle-chart .circle05.ani .fix01 .half01 {transform: rotate(0deg);}
 .growth #fullpage .section02 .animation-area .circle-chart .circle05.ani .fix02 .half02 {transform: rotate(90deg);}
 
-.growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover;}
-.growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 11rem 0; padding-top: 13.2rem;}
+.growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover; padding-top: 6.5rem;}
+.growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 11rem 0; position: relative;}
+.growth #fullpage .section03 .container .animation-area {width: 100%}
 .growth #fullpage .section03 .animation-area .bar-chart {position: relative; background: url('../img/sub/img_growth03_02.png') no-repeat center; background-size: 100%; width: 77.7rem; height: 33.6rem; margin: 0 auto;}
-.growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #ffe516; position: absolute; left: 8.8rem; transition: all 1s;}
-.growth #fullpage .section03 .animation-area .bar-chart [class^="bar"] {width: 0; height: 1.8rem; left: 7.1rem; position: absolute; background-color: #ffe516; transition: all 1.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2.2rem; font-weight: 700; color: #ffe516; position: absolute; left: 11.326%; transition: all 1s;}
+.growth #fullpage .section03 .animation-area .bar-chart [class^="bar"] {width: 0; height: 5.358%; left: 9.138%; position: absolute; background-color: #ffe516; transition: all 1s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 5.8rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 12rem; transition-delay: 0.1s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 18.2rem; transition-delay: 0.3s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 24.3rem; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 30.5rem; transition-delay: 0.7s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text01 {top: 18.162%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text02 {top: 36.715%; transition-delay: 0.1s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text03 {top: 55.1667%; transition-delay: 0.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text04 {top: 73.022%; transition-delay: 0.5s;}
+.growth #fullpage .section03 .animation-area .bar-chart .text05 {top: 91.774%; transition-delay: 0.7s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .bar01 {top: 6.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar02 {top: 13.1rem; transition-delay: 0.1s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar03 {top: 19.2rem; transition-delay: 0.3s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 25.4rem; transition-delay: 0.5s;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 31.4rem; transition-delay: 0.7s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar01 {top: 20.536%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar02 {top: 38.989%; transition-delay: 0.1s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar03 {top: 57.143%; transition-delay: 0.3s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar04 {top: 75.596%; transition-delay: 0.5s;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar05 {top: 93.953%; transition-delay: 0.7s;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .text01.ani {left: 18.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text02.ani {left: 27rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text03.ani {left: 33.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text04.ani {left: 43.7rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .text05.ani {left: 68.8rem;}
+.growth #fullpage .section03 .animation-area .bar-chart .text01.ani {left: 24.325%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text02.ani {left: 34.75%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text03.ani {left: 43.63%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text04.ani {left: 56.242%;}
+.growth #fullpage .section03 .animation-area .bar-chart .text05.ani {left: 88.546%;}
 
-.growth #fullpage .section03 .animation-area .bar-chart .bar01.ani {width: 10.1rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar02.ani {width: 18.3rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar03.ani {width: 25.9rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar04.ani {width: 35rem;}
-.growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 60rem;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar01.ani {width: 12.999%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar02.ani {width: 23.553%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar03.ani {width: 33.334%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar04.ani {width: 45.046%;}
+.growth #fullpage .section03 .animation-area .bar-chart .bar05.ani {width: 77.211%;}
 
-#fp-nav ul li a span {background-color: #ffffff;}
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+#fp-nav {width: 3.5rem;}
+#fp-nav ul {background-color: rgb(209, 211, 212, 0.7); border-radius: 1.8rem; padding: 1.2rem 0.8rem; display: flex; flex-direction: column; gap: 3rem 0;}
+#fp-nav ul li {margin: 0; width: 2rem; height: 2rem; border-radius: 50%; padding: 0.5rem 0.5rem;}
+#fp-nav ul li a {background-color: #7b7b7c; border-radius: 50%; width: 100%; height: 1rem; display: block; border: 0;}
+#fp-nav ul li a span {display: none;}
+#fp-nav ul li:has(.active) { padding: 0 0;}
+#fp-nav ul li a.active {background: none; border: 1px solid #7b7b7c; width: 100%; height: 2rem;}
 
 /* 찾아보는 역사 */
 .media {background: url('../img/sub/bg_media.png') no-repeat top center; background-size: 144rem auto; display: flex; justify-content: center; padding-top: 32.3rem; padding-bottom: 13.8rem;}
@@ -283,6 +314,10 @@
 .media ul li .text-area p {width: fit-content; margin: 0 auto; padding-top: 0.8rem; border-top: 1px solid #000000; font-size: 1.5rem; font-weight: 600;}
 
 @media screen and (max-width: 1390px) {
+    /* .sub {padding-top: 7.5rem;} */
+    /* 역사 하이라이팅 */
+    /* .timeline {top: 7.5rem;} */
+
     /* 역사 하이라이팅 */
     .history .history-detail .visual {width: 50%}
     .history .history-detail .visual .inner {width: 100%;}
@@ -325,15 +360,19 @@
 }
 
 @media screen and (max-width: 1170px) {
+    .sub {padding-top: 7.5rem;}
+    .sub .sub-nav {top: 7.5rem;}
     .sub .sub-nav ul {}
     .sub .sub-nav ul li {flex: 1 0;}
     .sub .sub-nav ul li a {font-size: 1rem; padding: 2.4rem 0rem;}
+
+    #header.scroll + .sub .sub-nav {top: 7.5rem;}
 
     /*-------------------------------------------------------------------
         @메뉴명
     -------------------------------------------------------------------*/
     /* 역사 하이라이팅 */
-    .timeline {}
+    .timeline {top: 7.5rem;}
     .timeline ul {justify-content: flex-start; padding: 0 5rem; width: fit-content}
 
     .history .history-headline {justify-content: flex-start; height: calc(100vh - 7.5rem);}
@@ -405,23 +444,64 @@
     .message .congrats {padding-top: 16rem; padding-bottom: 15rem; width: calc(100% + 8rem); margin-left: -4rem; margin-right: -4rem; background: url('../img/sub/bg_congrats_pc.png') no-repeat center; background-size: cover;}
     .message .congrats img {margin: 0 auto;}
 
+    /* 숫자로 보는 성장 */
+    .growth #fullpage .section {min-height: 100vh;}
+    .growth #fullpage .section01 .container {gap: 13rem 0;}
+    .growth #fullpage .section01 .container > img {width: 38rem;}
+    .growth #fullpage .section01 .animation-area .line-chart {width: 41.5rem; height: 25.5rem;}
+    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 41.5rem;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 1.4rem;}
+
+    .growth #fullpage .section02 .container {gap: 8.5rem 0;}
+    .growth #fullpage .section02 .container > img {width: 43.8rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart {width: 37.8rem; height: 30.6rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix01 .half01 {border-width: 1rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix02 .half02 {border-width: 1rem;}
+
+    .growth #fullpage .section03 .container {gap: 11.5rem 0;}
+    .growth #fullpage .section03 .container > img {width: 26rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart {width: 44.7rem; height: 19.4rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 1.4rem;}
+
+    #fp-nav {width: 2.4rem;}
+    #fp-nav ul {padding: 0.8rem 0.5rem; gap: 2rem 0;}
+    #fp-nav ul li {width: 1.4rem; height: 1.4rem; padding: 0.3rem 0.3rem;}
+    #fp-nav ul li a.active {height: 1.4rem;}
+
     /* 찾아보는 역사 */
     .media ul {flex-direction: column; gap: 6rem 0}
 }
 
 @media screen and (max-width: 750px) {
+    .sub {padding-top: 12rem;}
+    .sub .sub-nav {top: 12rem;}
     .sub .sub-nav ul li a {font-size: 1.5rem; padding: 3.8rem 0rem;}
+
+    #header.scroll + .sub .sub-nav {top: 12rem;}
 
     /*-------------------------------------------------------------------
         @메뉴명
     -------------------------------------------------------------------*/
     /* 역사 하이라이팅 */
+    .timeline {top: 12rem;}
     .timeline ul {padding: 0 8.5rem;}
     
-    .history .history-headline .headline {}
+    .history .history-headline {justify-content: flex-start; height: calc(100vh - 7.5rem);}
+    .history .history-headline.bg01 {background-position: center bottom 7rem; background-size: 48.3rem; padding-bottom: 24.1rem;}
+    .history .history-headline.bg02 {background-position: center bottom 7rem; background-size: 56.7rem; padding-bottom: 28.3rem;}
+    .history .history-headline.bg03 {background-position: center bottom 7rem; background-size: 33.9rem; padding-bottom: 17rem;}
+    .history .history-headline.bg04 {background-position: center bottom 7rem; background-size: 42rem; padding-bottom: 21rem;}
+    .history .history-headline.bg05 {background-position: center bottom 7rem; background-size: 47.7rem; padding-bottom: 23.9rem;}
+    .history .history-headline.bg06 {background-position: center bottom 7rem; background-size: 44.7rem; padding-bottom: 22.4rem;}
+    .history .history-headline.bg07 {background-position: center bottom 7rem; background-size: 50.7rem; padding-bottom: 25.4rem;}
+    .history .history-headline.bg08 {background-position: center bottom 7rem; background-size: 41.2rem; padding-bottom: 20.6rem;}
+
+
     .history .history-headline .headline .year-headline {font-size: 10rem;}
     .history .history-headline .headline .title-headline {font-size: 4.2rem; margin-top: 1.5rem;}
-    .history .history-headline .headline .text-headline {font-size: 2.2rem;}
+    .history .history-headline .headline .text-headline {font-size: 2.2rem; width: 100%;}
+
+    .history .history-detail .visual .bg-visual {max-height: none;}
     
     #header.scroll + .sub .timeline {top: 12rem;}
 
@@ -453,4 +533,27 @@
     .message .greeting .cont .president .name {font-size: 2.4rem; font-weight: 500;}
 
     .message .congrats {padding-top: 11.5rem; padding-bottom: 34.6rem; background: url('../img/sub/bg_congrats_mobile.png') no-repeat center; background-size: cover;}
+
+    /* 숫자로 보는 성장 */
+    .growth #fullpage .section01 .container {gap: 19.5rem 0;}
+    .growth #fullpage .section01 .container > img {width: 57rem;}
+    .growth #fullpage .section01 .animation-area .line-chart {width: 62rem; height: 37.9rem;}
+    .growth #fullpage .section01 .animation-area .line-chart .line img {width: 62rem;}
+    .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 2rem;}
+
+    .growth #fullpage .section02 .container {gap: 12.5rem 0;}
+    .growth #fullpage .section02 .container > img {width: 65.6rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart {width: 56.7rem; height: 45.9rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix01 .half01 {border-width: 1.5rem;}
+    .growth #fullpage .section02 .animation-area .circle-chart [class^="circle"] .fix02 .half02 {border-width: 1.5rem;}
+
+    .growth #fullpage .section03 .container {gap: 17rem 0;}
+    .growth #fullpage .section03 .container > img {width: 39rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart {width: 67rem; height: 29.1rem;}
+    .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2rem;}
+
+    #fp-nav {width: 3.5rem;}
+    #fp-nav ul {padding: 1.2rem 0.8rem; gap: 3rem 0;}
+    #fp-nav ul li {width: 2rem; height: 2rem; padding: 0.5rem 0.5rem;}
+    #fp-nav ul li a.active {height: 2rem;}
 }

@@ -13,24 +13,27 @@
 /*-------------------------------------------------------------------
     @header
 -------------------------------------------------------------------*/
-#header {overflow: hidden; height: 13.2rem;}
+#header {overflow: hidden; height: 13.2rem; position: fixed; z-index: 11; width: 100vw}
 #header.on {}
 #header .container {max-width: 87rem;}
 
 .logo {width: 14.7rem; height: 3.5rem; background: url('../img/common/logo.png') no-repeat center; background-size: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%)}
 .logo a { display: block; width: 100%; height: 100%; text-indent: -9999px; }
 
-.gnb {position: relative; background-color: #ffffff; transition: all 0.3s;}
+.gnb {position: relative; transition: all 0.3s;}
 .gnb::before {content: ""; width: 100vw; height: 1px; background: #7f7f7f; position: absolute; top: 0; left: 50%; transform: translateX(-50%)}
 .gnb ul.depth01 {display: flex; align-items: center; justify-content: center;}
 .gnb ul.depth01 > li {flex: 1 0; position: relative; z-index: 2;}
-.gnb ul.depth01 > li > a {display: block; font-size: 1.7rem; font-weight: 500; color: #080808; text-align: center; line-height: 1.177; padding: 2rem 0; transition: all 0.3s;}
+.gnb ul.depth01 > li > a {display: block; font-size: 1.7rem; font-weight: 500; color: #ffffff; text-align: center; line-height: 1.177; padding: 2rem 0; transition: all 0.3s;}
+*:has(.sub) .gnb ul.depth01 > li > a  {color: #080808;}
+*:has(#fullpage) .gnb ul.depth01 > li > a  {color: #ffffff;}
 .gnb ul.depth01 > li.on::before,
 .gnb ul.depth01 > li:hover::before {content: ""; width: 100%; height: 2px; background-color: #cc1313; position: absolute; left: 0; top: 0;}
 .gnb ul.depth01 > li.on > a,
-.gnb ul.depth01 > li:hover > a {color: #cc1313;}
+.gnb ul.depth01 > li:hover > a {color: #cc1313 !important;}
 
-.gnb ul.depth02 {position: absolute; top: 100%;}
+.gnb ul.depth02{display: none}
+/* .gnb ul.depth02 {position: absolute; top: 100%;} */
 /* .gnb ul.depth02 {position: absolute; display: none; align-items: center; justify-content: center; background-color: #313131; width: 100vw; left: 50%; top:100%; transform: translateX(-50%);}
 
 .gnb ul.depth01 > li.on > ul.depth02 {display: flex;} */
@@ -39,12 +42,20 @@
 
 .btn-close {width: 2.6rem; height: 2.6rem; background: url('../img/icon/ic_close.png') no-repeat center; background-size: 100%; position: absolute; left: 3rem; top: 2.4rem; display: none;}
 
-.branding {height: 7.2rem; position: relative; display: flex; align-items: center; justify-content: center; transition: all 0.3s; background-color: #ffffff;}
-.branding .headline {text-align: center; font-size: 2.3rem; font-weight: 800;}
+.branding {height: 7.2rem; position: relative; display: flex; align-items: center; justify-content: center; transition: all 0.3s;}
+.branding .headline {text-align: center; font-size: 2.3rem; font-weight: 800; color: #ffffff;}
+*:has(.sub) .branding .headline {color: #080808;}
+*:has(#fullpage) .branding .headline  {color: #ffffff;}
 
+#header.scroll {height: auto;}
 #header.scroll .branding {height: 0;}
-#header.scroll .gnb {position: fixed; top: 0; z-index: 2; width: 100vw;}
+#header.scroll .gnb {position: fixed; top: 0; z-index: 2; width: 100vw; background-color: #ffffff;}
 #header.scroll .gnb::before {display: none;}
+#header.scroll .gnb ul.depth01 > li > a {color: #080808;}
+
+#header.hover {background-color: #ffffff; height: auto;}
+#header.hover .branding .headline {color: #080808;}
+#header.hover .gnb ul.depth01 > li > a {color: #080808;}
  
 /*-------------------------------------------------------------------
     @footer
@@ -68,7 +79,7 @@
 /*-------------------------------------------------------------------
     @content
 -------------------------------------------------------------------*/
-#content {position: relative;}
+#content {position: relative; min-height: 100vh;}
 
 .container{ margin-left: auto; margin-right: auto; position: relative; padding-left: 4rem; padding-right: 4rem;/* max-width: 117rem;*/ width: 100%;}
 
@@ -110,13 +121,13 @@
     .gnb .container {position: static !important; height: auto !important;}
     .gnb ul.depth01 {overflow: auto; height: calc(100vh - 7.5rem); display: block; /*padding: 0 4.5rem;*/}
     .gnb ul.depth01 > li + li {border-top: 1px solid #c9c9c9;}
-    .gnb ul.depth01 > li > a {font-size: 1.7rem; font-weight: 800; text-align: left; line-height: 1.177; padding: 1.6rem 0;}
+    .gnb ul.depth01 > li > a {font-size: 1.7rem; font-weight: 800; text-align: left; line-height: 1.177; padding: 1.6rem 0; color: #080808;}
     .gnb ul.depth01 > li.on::before,
     .gnb ul.depth01 > li:hover::before {display: none;}
 
     .gnb ul.depth02 {display: block; width: 100%; padding: 0.8rem 0; background-color: transparent; position: static; transform: translateX(0); border-top: 1px solid #c9c9c9;}
     .gnb ul.depth02 > li > a {padding: 0.4rem 1.5rem; font-size: 1.7rem; line-height: 2; color: #000000; font-weight: 200; display: block;}
-    .gnb ul.depth02 > li.on > a {color: #cc1313;}
+    .gnb ul.depth02 > li.on > a {color: #cc1313 !important;}
 
     .btn-menu {display: block;}
     .btn-close {display: block;}

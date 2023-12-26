@@ -5,6 +5,7 @@ $(document).ready(function(){
         gnb()
     } else {
         subNav();
+        gnbHover()
     }
 
     $(window).resize(function(){
@@ -14,6 +15,7 @@ $(document).ready(function(){
             gnb()
         } else {
             subNav();
+            gnbHover()
         }
     })
 
@@ -25,6 +27,14 @@ $(document).ready(function(){
         }
     })
 })
+
+function gnbHover(){
+    $('.gnb ul.depth01').hover(function(){
+        $('#header').addClass('hover')
+    }, function(){
+        $('#header').removeClass('hover')
+    })
+}
 
 // 메뉴
 function gnb(){

@@ -10,24 +10,24 @@
 .main [class^='sec'] .tit-sec{}
 
 /* 섹션 */
-.main .visual {position: relative; height: calc(100vh - 13.2rem);}
+.main .visual {position: relative; height: 100vh;}
 .main .visual .visual-text {position: absolute; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 2; width: 100%; flex-direction: column; color: #ffffff;}
 .main .visual .visual-text .title {font-family: 'Seolleim'; font-size: 8rem; text-align: center; line-height: 1.325;}
 .main .visual .visual-text .text {text-align: center; font-size: 2.7rem; font-weight: 800;}
 .main .visual .visual-text .copyright {position: absolute; bottom: 3rem; font-size: 1.4rem; text-align: center; left: 50%; transform: translateX(-50%); font-weight: 200; width: 100%;}
-.main .visual .visual-background .visual-swiper,
-.main .visual .visual-background video {width: 100%; height: calc(100vh - 13.2rem);}
-.main .visual .visual-background video {display: block; object-fit: cover;}
+.main .visual .visual-background {width: 100%; height: 100vh;}
+.main .visual .visual-background video {width: 100%; height: 100vh; display: block; object-fit: cover;}
+.main .visual .visual-background video.mobile {display: none;}
 .main .visual .visual-background .visual-swiper .swiper-wrapper .swiper-slide {position: relative;}
 .main .visual .visual-background .visual-swiper .swiper-wrapper .swiper-slide img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover;}
 
 .main .section01{}
 
 @media screen and (max-width: 1170px) {
-    .main .visual {position: relative; height: calc(100vh - 7.5rem);}
+    .main .visual .visual-background video.pc {display: none;}
+    .main .visual .visual-background video.mobile {display: block;}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 7.5rem);}
 }
 @media screen and (max-width: 750px) {
-    .main .visual {position: relative; height: calc(100vh - 12rem);}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 12rem);}
 }
