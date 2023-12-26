@@ -18,6 +18,8 @@ $(document).ready(function(){
     let aniTarget3 = $('.growth #fullpage .section03 .animation-area > div > *')
     let aniText
 
+    
+
     $('#fullpage').fullpage({
         responsiveSlides: true,
         responsiveHeight: 810,
@@ -33,44 +35,118 @@ $(document).ready(function(){
             }
 
             if(index == 1) {
-                setTimeout(() => {
-                    $('.growth #fullpage .section03 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section03 .dim').addClass('ani')
+                // }, 500);
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
                     aniTarget3.addClass('ani'); 
-                }, 3500);
+                }, 1000);
             } else if(index == 2) {
-                setTimeout(() => {
-                    $('.growth #fullpage .section02 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section02 .dim').addClass('ani')
+                // }, 500);
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
-                    aniTarget2.addClass('ani'); 
-                }, 3500);
+                    $('.chart01').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart01').width(),
+                        value: 0.15,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart02').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart02').width(),
+                        value: 0.285,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart03').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart03').width(),
+                        value: 0.453,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart04').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart04').width(),
+                        value: 0.603,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart05').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart05').width(),
+                        value: 0.744,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                }, 1000);
             } else {
-                setTimeout(() => {
-                    $('.growth #fullpage .section01 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section01 .dim').addClass('ani')
+                // }, 500);
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
                     aniTarget1.addClass('ani'); 
-                }, 3500);
+                }, 1000);
             }
         },
         
@@ -82,47 +158,121 @@ $(document).ready(function(){
             }
 
             if(index == 1) {
-                setTimeout(() => {
-                    $('.growth #fullpage .section03 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section03 .dim').addClass('ani')
+                // }, 500);
                 $('#header').removeClass('scroll')
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
                     aniTarget3.addClass('ani'); 
-                }, 1500);
+                }, 1000);
             } else if(index == 2) {
-                setTimeout(() => {
-                    $('.growth #fullpage .section02 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section02 .dim').addClass('ani')
+                // }, 500);
 				$('#header').addClass('scroll')
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
-                    aniTarget2.addClass('ani'); 
-                }, 3500);
+                    $('.chart01').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart01').width(),
+                        value: 0.15,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart02').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart02').width(),
+                        value: 0.285,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart03').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart03').width(),
+                        value: 0.453,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart04').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart04').width(),
+                        value: 0.603,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                    $('.chart05').circleProgress({
+                        startAngle: Math.PI/2 ,
+                        size: $('.chart05').width(),
+                        value: 0.744,
+                        animation: true,
+                        reverse: true,
+                        thickness: $('.chart05').width() * 0.03429,
+                        lineCap:'square',
+                        fill: {color: '#ff0032'},
+                        emptyFill: "rgba(0,0,0,0)",
+                        animation:{
+                            duration: 400,
+                            easing: "linear"
+                        },
+                    });
+                }, 1000);
             } else {
-                setTimeout(() => {
-                    $('.growth #fullpage .section01 .dim').addClass('ani')
-                }, 500);
+                // setTimeout(() => {
+                //     $('.growth #fullpage .section01 .dim').addClass('ani')
+                // }, 500);
 				$('#header').addClass('scroll')
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .container > img').addClass('ani')
-                }, 1500)
+                }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .animation-area').addClass('ani')
-                }, 2000);
+                }, 1000);
                 setTimeout(() => {
                     aniTarget1.addClass('ani'); 
-                }, 3500);
+                }, 1000);
             }
         }
     });
@@ -136,17 +286,18 @@ $(document).ready(function(){
         const viewportHeight = $(window).height();
         const scrolltop = $(window).scrollTop();
         
-        $('.history-detail').each(function(){
+        $('.history-headline').each(function(){
             let thisScrollTop = $(this).offset().top;
-            let thisHeight = $(this).height();
-            let detailIdx = $('.history-detail').index(this)
+            let thisContHeight = $(this).next().height();
+            let totalHeight = $(this).height() + $(this).next().height();
+            let detailIdx = $('.history-headline').index(this)
 
-            if(scrolltop + topBlank >= thisScrollTop && scrolltop < thisScrollTop + $(this).height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
-                $(this).addClass('on')
+            if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop <  $(this).next().offset().top + $(this).next().height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
+                $(this).next().addClass('on')
 
                 
             } else {
-                $(this).removeClass('on')
+                $(this).next().removeClass('on')
                 // $(this).find('.inner').css('transform', 'translateY('+ thisScrollTop + $(this).height() - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank + ')')
             }
 
@@ -155,7 +306,10 @@ $(document).ready(function(){
                 $('.timeline ul li').eq(detailIdx).find('a').css('color', '#cc1313')
                 $('.timeline ul li').eq(detailIdx).prev().addClass('on')
                 $('.timeline ul li').eq(detailIdx).prev().find('a').css('color', '');
-                $('.timeline ul li').eq(detailIdx).find('.bar').css('width', progress(thisScrollTop, thisHeight, scrolltop) + '%')
+                $('.timeline ul li').eq(detailIdx).find('.bar').css('width', progress(thisScrollTop, totalHeight, scrolltop) + '%')
+            } else if(scrolltop == 0){
+                $('.timeline ul li').eq(0).addClass('on')
+                $('.timeline ul li').eq(0).find('a').css('color', '#cc1313')
             } else {
                 $('.timeline ul li').eq(detailIdx).removeClass('on')
                 $('.timeline ul li').eq(detailIdx).find('a').css('color', '')
@@ -192,15 +346,15 @@ $(document).ready(function(){
     }
 })
 
-function progress(thisScrollTop, thisHeight, scrolltop){
-    // console.log(thisScrollTop, thisHeight, scrolltop)
+function progress(thisScrollTop, totalHeight, scrolltop){
+    // console.log(thisScrollTop, totalHeight, scrolltop)
     // console.log(scrolltop - thisScrollTop)
     let progress = scrolltop - thisScrollTop;
 
     if(progress < 0) {
         progress = 0;
     } else {
-        progress = (progress/thisHeight)*100
+        progress = (progress/totalHeight)*100
 
         if(progress > 100){
             progress = 100
