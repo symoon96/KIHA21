@@ -342,7 +342,7 @@ body:has(.history) #footer .copyright {padding: 2rem 0 1.9rem;}
     .timeline {top: 7.5rem;}
     .timeline ul {justify-content: flex-start; padding: 0 5rem; width: fit-content}
 
-    .history .history-headline {justify-content: flex-start; height: calc(100vh - 7.5rem);}
+    .history .history-headline {justify-content: flex-start; height: calc(95vh - 7.5rem);}
     .history .history-headline.bg01 {background-position: right 1.5rem bottom 7rem; background-size: 32.2rem;}
     .history .history-headline.bg02 {background-position: right 1.5rem bottom 7rem; background-size: 37.8rem;}
     .history .history-headline.bg03 {background-position: right 1.5rem bottom 7rem; background-size: 22.6rem;}
@@ -453,7 +453,7 @@ body:has(.history) #footer .copyright {padding: 2rem 0 1.9rem;}
     .timeline {top: 12rem;}
     .timeline ul {padding: 0 8.5rem;}
     
-    .history .history-headline {justify-content: flex-start; height: calc(100vh - 7.5rem);}
+    .history .history-headline {justify-content: flex-start; height: calc(95vh - 7.5rem);}
     .history .history-headline.bg01 {background-position: center bottom 7rem; background-size: 48.3rem; padding-bottom: 24.1rem;}
     .history .history-headline.bg02 {background-position: center bottom 7rem; background-size: 56.7rem; padding-bottom: 28.3rem;}
     .history .history-headline.bg03 {background-position: center bottom 7rem; background-size: 33.9rem; padding-bottom: 17rem;}

@@ -286,13 +286,13 @@ $(document).ready(function(){
         const viewportHeight = $(window).height();
         const scrolltop = $(window).scrollTop();
         
-        $('.history-detail').each(function(){
+        $('.history-headline').each(function(){
             let thisScrollTop = $(this).offset().top;
-            // let thisContHeight = $(this).next().height();
-            let totalHeight = $(this).height();
+            let thisContHeight = $(this).next().height();
+            let totalHeight = $(this).height() + $(this).next().height();
             let detailIdx = $('.history-headline').index(this)
 
-            if(scrolltop + topBlank >= thisScrollTop && scrolltop <  thisScrollTop + $(this).height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
+            if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop <  $(this).next().offset().top + $(this).next().height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
                 $(this).next().addClass('on')
 
                 
