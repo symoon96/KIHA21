@@ -293,7 +293,6 @@ $(document).ready(function(){
             let detailIdx = $('.history-headline').index(this)
 
             if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop <  $(this).next().offset().top + $(this).next().height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
-                $('.history').find('on').removeClass('on')
                 $(this).next().addClass('on')
             } else {
                 $(this).next().removeClass('on')
