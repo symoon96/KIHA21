@@ -280,6 +280,10 @@ body:has(.history) #footer .copyright {padding: 2rem 0 1.9rem;}
 .media ul li:last-child .text-area {padding-left: 24rem;}
 .media ul li .text-area p {width: fit-content; margin: 0 auto; padding-top: 0.8rem; border-top: 1px solid #000000; font-size: 1.5rem; font-weight: 600;}
 
+@supports (-webkit-appearance:none) and (stroke-color: transform){
+    .history .history-detail .visual .inner {height: -webkit-fill-available;}
+} 
+
 @media screen and (max-width: 1390px) {
     /* .sub {padding-top: 7.5rem;} */
     /* 역사 하이라이팅 */
