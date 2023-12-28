@@ -2,6 +2,8 @@ var windowWidth = window.innerWidth;
 var changeSwiper = undefined;
 var magazineSwiper = undefined;
 
+let prevIdx
+
 $(document).ready(function(){
     initChangeSwiper();
     initMagazineSwiper();
@@ -9,7 +11,7 @@ $(document).ready(function(){
 
     AOS.init();
 
-    let topBlank = $('.gnb').outerHeight() + $('.timeline').outerHeight();
+    let topBlank = $('#header').hasClass('scroll') ? $('.gnb').height() + $('.timeline').outerHeight() : $('#header').height() + $('.timeline').outerHeight();
 
     $(window).scrollTop(0);
 
@@ -17,8 +19,6 @@ $(document).ready(function(){
     let aniTarget2 = $('.growth #fullpage .section02 .animation-area > div > *')
     let aniTarget3 = $('.growth #fullpage .section03 .animation-area > div > *')
     let aniText
-
-    
 
     $('#fullpage').fullpage({
         responsiveSlides: true,
@@ -278,25 +278,32 @@ $(document).ready(function(){
     });
 
     $('.timeline ul li a').click(function(){
-        $('html').animate({scrollTop: $('.history-detail').eq($(this).closest('li').index()).offset().top}, 1000)
+        $('html').animate({scrollTop: $('.history-headline').eq($(this).closest('li').index()).offset().top - topBlank}, 1000)
     })
     // $('.history-headline').height($(window).innerHeight() - $('#header').height())
     // 역사 하이라이트
+    $('.timeline ul li').eq(0).addClass('on')
+    $('.timeline ul li').eq(0).find('a').css('color', '#cc1313');
+    
     $(window).scroll(function(){
         const viewportHeight = $(window).height();
         const scrolltop = $(window).scrollTop();
+
+        let thisScrollTop
+        let thisContHeight
+        let totalHeight
+        let detailIdx
         
         $('.history-headline').each(function(){
-            let thisScrollTop = $(this).offset().top;
-            let thisContHeight = $(this).next().height();
-            let totalHeight = $(this).height() + $(this).next().height();
-            let detailIdx = $('.history-headline').index(this)
+            thisScrollTop = $(this).offset().top;
+            thisContHeight = $(this).next().height();
+            totalHeight = $(this).height() + $(this).next().height();
+            detailIdx = $('.history-headline').index(this);
 
-            if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop <  $(this).next().offset().top + $(this).next().height() /* - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank*/){
+            if(scrolltop + topBlank >= $(this).next().offset().top && scrolltop < $(this).next().offset().top + $(this).next().height()){
                 $(this).next().addClass('on')
             } else {
                 $(this).next().removeClass('on')
-                // $(this).find('.inner').css('transform', 'translateY('+ thisScrollTop + $(this).height() - $('.history .history-detail .visual .text-visual').outerHeight() - topBlank + ')')
             }
 
             if(scrolltop + topBlank >= thisScrollTop){
@@ -305,6 +312,7 @@ $(document).ready(function(){
                 $('.timeline ul li').eq(detailIdx).prev().addClass('on')
                 $('.timeline ul li').eq(detailIdx).prev().find('a').css('color', '');
                 $('.timeline ul li').eq(detailIdx).find('.bar').css('width', progress(thisScrollTop, totalHeight, scrolltop) + '%')
+
             } else if(scrolltop == 0){
                 $('.timeline ul li').eq(0).addClass('on')
                 $('.timeline ul li').eq(0).find('a').css('color', '#cc1313')
@@ -313,33 +321,50 @@ $(document).ready(function(){
                 $('.timeline ul li').eq(detailIdx).find('a').css('color', '')
                 $('.timeline ul li').eq(detailIdx).find('.bar').css('width', '')
             }
-        })
+        });
+
+        let currentIdx = $('.timeline ul li.on').last().index();
+
+        if($('.timeline').length > 0){
+            if(currentIdx !== prevIdx) {
+                let leftValue = $('.timeline ul li.on').last().index() == 0 ? 0 : $('.timeline ul li.on').last().position().left
+                $('.timeline').animate({scrollLeft: leftValue}, 300);
+            }
+        }
+
+        prevIdx = currentIdx
     })
 
     messageSet();
 
     $('html').click(function(e){
+        if($('.pop-view').hasClass('active')){
+            if($(e.target).is('.inner') && $(e.target).parents('.pop-view')){
+                $('.pop-view').removeClass('active');
+                $('body').css('overflow', '')
+    
+                $('#header').css('background-color', '')
+            }
+        }
+    })
+
+    if($('.pop-view').hasClass('active')){
         if($(e.target).is('.inner') && $(e.target).parents('.pop-view')){
-            $('.pop-view').remove();
+            $('.pop-view').removeClass('active');
             $('body').css('overflow', '')
 
             $('#header').css('background-color', '')
         }
-    })
-
-    if($('body').find('.pop-view').length > 0){
-        $('.pop-view').remove();
-        $('body').css('overflow', '')
-
-        $('#header').css('background-color', '')
     }
 
     if(windowWidth <= 1170){
-        if($('body').find('.pop-view').length > 0){
-            $('.pop-view').remove();
-            $('body').css('overflow', '')
-
-            $('#header').css('background-color', '')
+        if($('.pop-view').hasClass('active')){
+            if($(e.target).is('.inner') && $(e.target).parents('.pop-view')){
+                $('.pop-view').removeClass('active');
+                $('body').css('overflow', '')
+    
+                $('#header').css('background-color', '')
+            }
         }
     }
 })
@@ -408,7 +433,7 @@ function initMagazineSwiper() {
         magazineSwiper = new Swiper(".magazine-swiper .swiper", {
             slidesPerView: 3,
             spaceBetween: 0,
-            slidesPerGroup: 2,
+            slidesPerGroup: 3,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -426,15 +451,24 @@ function initMagazineSwiper() {
 
 function messageSet() {
     $('.message .congrats map area').each(function(){
-        $(this).attr('onclick', 'popViewMessage(' + ($(this).index() +1)+ ')')
+        $(this).attr('onclick', 'popViewMessage(' + ($(this).index())+ ')')
     })
 }
 
 function popViewMessage(target){
-    if($('.congrats').find('.pop-view').length <= 0){
-        $('.congrats').append(
-            '<div class="pop-view"><div class="inner"><img src="../img/sub/img_congrats' + target + '.png" class="img"></div></div>'
-        );
+    var popSwiper = new Swiper(".popSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        observer: true,
+        observeParents: true,
+    });
+
+    popSwiper.slideTo(target, 1000, false)
+
+    if(!$('.congrats').find('.pop-view').hasClass('active')){
+        $('.pop-view').addClass('active');
 
         $('body').css('overflow', 'hidden');
 

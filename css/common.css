@@ -13,11 +13,12 @@
 /*-------------------------------------------------------------------
     @header
 -------------------------------------------------------------------*/
-#header {overflow: hidden; height: 13.2rem; position: fixed; z-index: 11; width: 100vw}
+#header {overflow: hidden; height: 13.2rem; position: fixed; z-index: 11; width: 100vw; transition: all 0.3s;}
 #header.on {}
 #header .container {max-width: 87rem;}
 
-.logo {width: 14.7rem; height: 3.5rem; background: url('../img/common/logo.png') no-repeat center; background-size: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%)}
+.logo {width: 14.7rem; height: 3.5rem; background: url('../img/common/logo_w.svg') no-repeat center; background-size: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%)}
+*:has(.sub) .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%;}
 .logo a { display: block; width: 100%; height: 100%; text-indent: -9999px; }
 
 .gnb {position: relative; transition: all 0.3s;}
@@ -48,12 +49,14 @@
 *:has(#fullpage) .branding .headline  {color: #ffffff;}
 
 #header.scroll {height: auto;}
+#header.scroll .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%}
 #header.scroll .branding {height: 0;}
 #header.scroll .gnb {position: fixed; top: 0; z-index: 2; width: 100vw; background-color: #ffffff;}
 #header.scroll .gnb::before {display: none;}
 #header.scroll .gnb ul.depth01 > li > a {color: #080808;}
 
 #header.hover {background-color: #ffffff; height: auto;}
+#header.hover .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%}
 #header.hover .branding .headline {color: #080808;}
 #header.hover .gnb ul.depth01 > li > a {color: #080808;}
  
@@ -111,7 +114,7 @@
 
     #header.scroll .branding {height: auto;}
 
-    .logo {width: 25.9rem; height: 4.1rem; background: url('../img/common/logo_m.png') no-repeat center; background-size: 100%; left: 4rem;}
+    .logo {width: 25.9rem; height: 4.1rem; background: url('../img/common/logo_m.png') no-repeat center !important; background-size: 100% !important; left: 4rem;}
 
     .branding {height: 7.5rem;}
     .branding .headline {display: none;}

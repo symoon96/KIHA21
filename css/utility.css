@@ -152,6 +152,11 @@
 /* Device */
 .hide-pc {display:none !important;}
 
+@media screen and (max-width: 1170px) {
+    .show-pad {display: block !important;}
+    .hide-pad {display: none !important;}
+}
+
 @media screen and (max-width: 750px) {
     .show-mobile {display: block !important;}
     .hide-mobile {display: none !important;}
