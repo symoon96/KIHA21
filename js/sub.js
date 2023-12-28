@@ -407,7 +407,7 @@ $(window).on('resize', function () {
 function initChangeSwiper() {
     if (windowWidth > 750 && changeSwiper == undefined) {
         changeSwiper = new Swiper(".change-swiper .swiper", {
-            slidesPerView: 2,
+            slidesPerView: "auto",
             spaceBetween: 0,
             slidesPerGroup: 2,
             pagination: {
@@ -420,16 +420,16 @@ function initChangeSwiper() {
             },
         });
 
-        if($('.change .change-swiper .swiper .swiper-wrapper .swiper-slide.bg').length > 0){
-            changeSwiper.appendSlide('<div class="swiper-slide"><div class="img-wrap"><img src="../img/sub/img_change03_05_pc02.png" alt=""></div><div class="caption-wrap"></div></div>')
-        }
+        // if($('.change .change-swiper .swiper .swiper-wrapper .swiper-slide.bg').length > 0){
+        //     changeSwiper.appendSlide('<div class="swiper-slide"><div class="img-wrap"><img src="../img/sub/img_change03_05_pc02.png" alt=""></div><div class="caption-wrap"></div></div>')
+        // }
     } else if (windowWidth <= 750 && changeSwiper != undefined) {
         changeSwiper.destroy();
         changeSwiper = undefined;
 
-        if($('.change .change-swiper .swiper .swiper-wrapper .swiper-slide.bg').length > 0){
-            changeSwiper.removeSlide(5)
-        }
+        // if($('.change .change-swiper .swiper .swiper-wrapper .swiper-slide.bg').length > 0){
+        //     changeSwiper.removeSlide(5)
+        // }
     }
 }
 
