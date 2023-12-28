@@ -57,83 +57,86 @@ $(document).ready(function(){
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
                 }, 1000);
-                setTimeout(() => {
-                    $('.chart01').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart01').width(),
-                        value: 0.15,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart02').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart02').width(),
-                        value: 0.285,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart03').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart03').width(),
-                        value: 0.453,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart04').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart04').width(),
-                        value: 0.603,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart05').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart05').width(),
-                        value: 0.744,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                }, 1000);
+                if(!$('.growth #fullpage .section02 .animation-area').hasClass('ani')){
+                    setTimeout(() => {
+                        $('.chart01').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart01').width(),
+                            value: 0.15,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart02').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart02').width(),
+                            value: 0.285,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart03').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart03').width(),
+                            value: 0.453,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart04').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart04').width(),
+                            value: 0.603,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart05').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart05').width(),
+                            value: 0.744,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                    }, 1000);
+                }
+                
             } else {
                 // setTimeout(() => {
                 //     $('.growth #fullpage .section01 .dim').addClass('ani')
@@ -182,83 +185,85 @@ $(document).ready(function(){
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
                 }, 1000);
-                setTimeout(() => {
-                    $('.chart01').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart01').width(),
-                        value: 0.15,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart02').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart02').width(),
-                        value: 0.285,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart03').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart03').width(),
-                        value: 0.453,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart04').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart04').width(),
-                        value: 0.603,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                    $('.chart05').circleProgress({
-                        startAngle: Math.PI/2 ,
-                        size: $('.chart05').width(),
-                        value: 0.744,
-                        animation: true,
-                        reverse: true,
-                        thickness: $('.chart05').width() * 0.03429,
-                        lineCap:'square',
-                        fill: {color: '#ff0032'},
-                        emptyFill: "rgba(0,0,0,0)",
-                        animation:{
-                            duration: 400,
-                            easing: "linear"
-                        },
-                    });
-                }, 1000);
+                if(!$('.growth #fullpage .section02 .animation-area').hasClass('ani')){
+                    setTimeout(() => {
+                        $('.chart01').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart01').width(),
+                            value: 0.15,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart02').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart02').width(),
+                            value: 0.285,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart03').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart03').width(),
+                            value: 0.453,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart04').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart04').width(),
+                            value: 0.603,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                        $('.chart05').circleProgress({
+                            startAngle: Math.PI/2 ,
+                            size: $('.chart05').width(),
+                            value: 0.744,
+                            animation: true,
+                            reverse: true,
+                            thickness: $('.chart05').width() * 0.03429,
+                            lineCap:'square',
+                            fill: {color: '#ff0032'},
+                            emptyFill: "rgba(0,0,0,0)",
+                            animation:{
+                                duration: 400,
+                                easing: "linear"
+                            },
+                        });
+                    }, 1000);
+                }
             } else {
                 // setTimeout(() => {
                 //     $('.growth #fullpage .section01 .dim').addClass('ani')
