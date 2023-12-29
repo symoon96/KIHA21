@@ -113,7 +113,7 @@ body:has(.history) #footer .copyright {padding: 2rem 0 1.9rem;}
 .change {padding-top: 11.5rem; padding-bottom: 6rem;}
 .change .change-swiper {padding-left: 5.5rem; padding-right: 5.5rem; max-width: 105.5rem; margin: 0 auto; position: relative;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide {width: 50%;}
-.change .change-swiper .swiper .swiper-wrapper .swiper-slide:last-child {width: 100%;}
+.change .change-swiper .swiper .swiper-wrapper .swiper-slide.full {width: 100%;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide:nth-child(odd) .caption-wrap {text-align: left;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide:nth-child(even) .caption-wrap {text-align: right;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .img-wrap img {width: 100%;}

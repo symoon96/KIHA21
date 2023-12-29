@@ -126,6 +126,7 @@
     .gnb ul.depth01 {overflow: auto; height: calc(100vh - 7.5rem); display: block; /*padding: 0 4.5rem;*/}
     .gnb ul.depth01 > li + li {border-top: 1px solid #c9c9c9;}
     .gnb ul.depth01 > li > a {font-size: 1.7rem; font-weight: 800; text-align: left; line-height: 1.177; padding: 1.6rem 0; color: #080808;}
+    *:has(#fullpage) .gnb ul.depth01 > li > a {color: #080808;}
     .gnb ul.depth01 > li.on::before,
     .gnb ul.depth01 > li:hover::before {display: none;}
 
@@ -136,7 +137,7 @@
     .btn-menu {display: block;}
     .btn-close {display: block;}
 
-    #header.scroll .gnb {width: 100%; z-index: 10;}
+    #header.scroll .gnb {width: 55rem; z-index: 10;}
 }
 
 @media screen and (max-width: 750px) {

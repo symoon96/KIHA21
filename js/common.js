@@ -56,13 +56,13 @@ function closeMenu(){
     $('.btn-close').click(function(){
         $('.gnb').css('transform', '');
 
-        dimRemove()
+        dimRemoveHeader()
     })
 }
 
 // dim 생성
 function dimMakerinHeader() {
-    if($('body').find('.dim').length > 0){
+    if($('#header').find('.dim').length > 0){
         return;
     }
     $('#header').append('<div class="dim"></div>');
@@ -81,6 +81,12 @@ function dimMaker() {
 // dim 제거
 function dimRemove() {
     $('.dim').remove();
+    bodyAuto();
+}
+
+// dim 제거
+function dimRemoveHeader() {
+    $('#header .dim').remove();
     bodyAuto();
 }
 
