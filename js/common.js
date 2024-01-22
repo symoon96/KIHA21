@@ -1,21 +1,33 @@
 $(document).ready(function(){
     let windowWidth = window.innerWidth;
 
+    const url = new URL(window.location);
+    const urlParams = url.searchParams;
+
     if(windowWidth <= 1170) {
         gnb()
     } else {
         subNav();
         gnbHover()
+        if(urlParams.get('s')) {
+            const scrollTop = $('.'+urlParams.get('s')).offset().top;
+            $('html, body').animate({scrollTop: scrollTop-59}, 500);
+        }
     }
 
     $(window).resize(function(){
         windowWidth = window.innerWidth;
-        
+
         if(windowWidth <= 1170) {
             gnb()
         } else {
             subNav();
-            gnbHover()
+            gnbHover();
+            
+            if(urlParams.get('s')) {
+                const scrollTop = $('.'+urlParams.get('s')).offset().top;
+                $('html, body').animate({scrollTop: scrollTop-59}, 500);
+            }
         }
     })
 
@@ -26,6 +38,8 @@ $(document).ready(function(){
             $('#header').removeClass('scroll')
         }
     })
+
+    
 })
 
 function gnbHover(){
@@ -111,5 +125,5 @@ function subNav(){
 
     maxWidth = Math.max(...subNavWidth);
 
-    $('.sub .sub-nav ul li').css('width', maxWidth)
+    // $('.sub .sub-nav ul li').css('width', maxWidth)
 }

@@ -13,7 +13,8 @@
 /*-------------------------------------------------------------------
     @header
 -------------------------------------------------------------------*/
-#header {overflow: hidden; height: 13.2rem; position: fixed; z-index: 11; width: 100vw; transition: all 0.3s;}
+#header {/*overflow: hidden;*/ height: 13.2rem; position: fixed; z-index: 11; width: 100vw; transition: all 0.3s;}
+#header::after {content: ""; width: 100%; background-color: #ffffff; height: 0; transition: all 0.3s; left: 0; top: 0; position: absolute; z-index: 0;}
 #header.on {}
 #header .container {max-width: 87rem;}
 
@@ -21,20 +22,29 @@
 *:has(.sub) .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%;}
 .logo a { display: block; width: 100%; height: 100%; text-indent: -9999px; }
 
-.gnb {position: relative; transition: all 0.3s;}
-.gnb::before {content: ""; width: 100vw; height: 1px; background: #7f7f7f; position: absolute; top: 0; left: 50%; transform: translateX(-50%)}
+.gnb {position: relative; transition: all 0.3s; margin-top: 7.2rem;}
+.gnb::before {content: ""; width: 100vw; height: 1px; background: #7f7f7f; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1;}
 .gnb ul.depth01 {display: flex; align-items: center; justify-content: center;}
-.gnb ul.depth01 > li {flex: 1 0; position: relative; z-index: 2;}
-.gnb ul.depth01 > li > a {display: block; font-size: 1.7rem; font-weight: 500; color: #ffffff; text-align: center; line-height: 1.177; padding: 2rem 0; transition: all 0.3s;}
+.gnb ul.depth01 > li {flex: 1 0; z-index: 2;}
+.gnb ul.depth01 > li:hover {z-index: 3;}
+.gnb ul.depth01 > li > a {display: block; font-size: 1.7rem; font-weight: 500; color: #ffffff; text-align: center; line-height: 1.177; padding: 2rem 0; transition: all 0.3s; position: relative;}
 *:has(.sub) .gnb ul.depth01 > li > a  {color: #080808;}
 *:has(#fullpage) .logo {background: url('../img/common/logo_w.svg') no-repeat center; background-size: 100%;}
 *:has(#fullpage) .gnb ul.depth01 > li > a  {color: #ffffff;}
-.gnb ul.depth01 > li.on::before,
-.gnb ul.depth01 > li:hover::before {content: ""; width: 100%; height: 2px; background-color: #cc1313; position: absolute; left: 0; top: 0;}
+.gnb ul.depth01 > li.on > a::before,
+.gnb ul.depth01 > li:hover > a::before {content: ""; width: 100%; height: 2px; background-color: #cc1313; position: absolute; left: 0; top: 0;}
 .gnb ul.depth01 > li.on > a,
 .gnb ul.depth01 > li:hover > a {color: #cc1313 !important;}
 
-.gnb ul.depth02{display: none}
+.gnb ul.depth02 {}
+.gnb ul.depth02 {position: absolute; overflow: hidden; height: 0; width: 100vw; top: 6rem; left: 50%; transform: translateX(-50%); background-color: #313131; z-index: 8; transition: all 0.3s; display: flex; align-items: center; justify-content: center; justify-items: stretch;}
+.gnb ul.depth02 > li {min-width: fit-content;}
+.gnb ul.depth02 > li > a {display: block; text-align: center; font-size: 1.5rem; color: #7d7d7d; padding: 2.1rem 5rem; line-height: 1.2; height: 6rem;}
+.gnb ul.depth01 > li:hover ul.depth02 {height: 6rem; transition: all 0.3s;}
+.gnb ul.depth02 > li:hover > a,
+.gnb ul.depth02 > li.on > a {color: #ffffff;}
+.gnb ul.depth01 > li.on ul.depth02 {height: 6rem;}
+.gnb ul.depth01 > li.on ul.depth02.highlight {height: 0;}
 /* .gnb ul.depth02 {position: absolute; top: 100%;} */
 /* .gnb ul.depth02 {position: absolute; display: none; align-items: center; justify-content: center; background-color: #313131; width: 100vw; left: 50%; top:100%; transform: translateX(-50%);}
 
@@ -44,19 +54,21 @@
 
 .btn-close {width: 2.6rem; height: 2.6rem; background: url('../img/icon/ic_close.png') no-repeat center; background-size: 100%; position: absolute; left: 3rem; top: 2.4rem; display: none;}
 
-.branding {height: 7.2rem; position: relative; display: flex; align-items: center; justify-content: center; transition: all 0.3s;}
-.branding .headline {text-align: center; font-size: 2.3rem; font-weight: 800; color: #ffffff;}
+.branding {height: 7.2rem; position: absolute; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 0; transition: all 0.3s; z-index: 1;}
+.branding .headline {text-align: center; font-size: 2.3rem; font-weight: 800; color: #ffffff; display: block;}
 *:has(.sub) .branding .headline {color: #080808;}
 *:has(#fullpage) .branding .headline  {color: #ffffff;}
 
 #header.scroll {height: auto;}
 #header.scroll .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%}
-#header.scroll .branding {height: 0;}
-#header.scroll .gnb {position: fixed; top: 0; z-index: 2; width: 100vw; background-color: #ffffff;}
+#header.scroll .branding {transform: translateY(-100%);}
+/* #header.scroll .gnb {position: fixed; top: 0; z-index: 2; width: 100vw; background-color: #ffffff;} */
+#header.scroll .gnb {margin-top: 0; background-color: #ffffff;}
 #header.scroll .gnb::before {display: none;}
 #header.scroll .gnb ul.depth01 > li > a {color: #080808;}
 
-#header.hover {background-color: #ffffff; height: auto;}
+#header.hover {/*background-color: #ffffff;*/ height: auto;}
+#header.hover::after {height: 100%;}
 #header.hover .logo {background: url('../img/common/logo.png') no-repeat center; background-size: 100%}
 #header.hover .branding .headline {color: #080808;}
 #header.hover .gnb ul.depth01 > li > a {color: #080808;}
@@ -113,26 +125,32 @@
     #header {height: 7.5rem;}
     #header .container {max-width: 100vw; height: 7.5rem; position: fixed; z-index: 9; left: 0; top: 0; background-color: #ffffff;}
 
-    #header.scroll .branding {height: auto;}
+    #header.scroll {height: 7.5rem;}
+    #header.scroll .branding {height: auto; transform: translateY(0);}
 
     .logo {width: 25.9rem; height: 4.1rem; background: url('../img/common/logo_m.png') no-repeat center !important; background-size: 100% !important; left: 4rem;}
 
     .branding {height: 7.5rem;}
     .branding .headline {display: none;}
 
-    .gnb {position: fixed; width: 55rem; right: 0; top: 0; padding-top: 7.5rem; min-height: 100vh; z-index: 999; background-color: #ffffff; transform: translateX(100%); transition: all 0.3s;}
+    .gnb {position: fixed; width: 55rem; right: 0; top: 0; padding-top: 7.5rem; min-height: 100vh; z-index: 999; background-color: #ffffff; transform: translateX(100%); transition: all 0.3s; margin-top: 0;}
     .gnb::before {display: none;}
     .gnb .container {position: static !important; height: auto !important;}
     .gnb ul.depth01 {overflow: auto; height: calc(100vh - 7.5rem); display: block; /*padding: 0 4.5rem;*/}
     .gnb ul.depth01 > li + li {border-top: 1px solid #c9c9c9;}
     .gnb ul.depth01 > li > a {font-size: 1.7rem; font-weight: 800; text-align: left; line-height: 1.177; padding: 1.6rem 0; color: #080808;}
     *:has(#fullpage) .gnb ul.depth01 > li > a {color: #080808;}
-    .gnb ul.depth01 > li.on::before,
-    .gnb ul.depth01 > li:hover::before {display: none;}
+    .gnb ul.depth01 > li.on > a::before,
+    .gnb ul.depth01 > li:hover > a::before {display: none;}
 
-    .gnb ul.depth02 {display: block; width: 100%; padding: 0.8rem 0; background-color: transparent; position: static; transform: translateX(0); border-top: 1px solid #c9c9c9;}
-    .gnb ul.depth02 > li > a {padding: 0.4rem 1.5rem; font-size: 1.7rem; line-height: 2; color: #000000; font-weight: 200; display: block;}
+    .gnb ul.depth02 {display: block; width: 100%; height: auto; display: block; padding: 0.8rem 0; background-color: transparent; position: static; transform: translateX(0); border-top: 1px solid #c9c9c9;}
+    .gnb ul.depth02 > li > a {padding: 0.4rem 1.5rem; font-size: 1.7rem; line-height: 2; color: #000000; font-weight: 200; display: block; height: auto; text-align: left;}
     .gnb ul.depth02 > li.on > a {color: #cc1313 !important;}
+    .gnb ul.depth01 > li.on ul.depth02 {height: auto;}
+    .gnb ul.depth02.highlight {display: none}
+    .gnb ul.depth01 > li:hover > a {color: #000000 !important;}
+    .gnb ul.depth02 > li:hover > a {color: #000000;}
+    .gnb ul.depth01 > li:hover ul.depth02 {height: auto;}
 
     .btn-menu {display: block;}
     .btn-close {display: block;}
@@ -147,6 +165,8 @@
     #header {height: 12rem;}
     #header .container {height: 12rem;}
 
+    #header.scroll {height: 12rem;}
+
     .branding {height: 12rem;}
 
     .logo {width: 41.5rem; height: 6.6rem;}
@@ -160,4 +180,28 @@
 
     .btn-menu {width: 5.2rem; height: 4.7rem;}
     .btn-close {width: 4.2rem; height: 4.2rem; left: 4.5rem; top: 3.9rem;}
+}
+
+@media (orientation: landscape) and (max-width: 750px) {
+    /*-------------------------------------------------------------------
+        @header
+    -------------------------------------------------------------------*/
+    #header {height: 7.5rem;}
+    #header .container {height: 7.5rem;}
+
+    #header.scroll {height: 7.5rem;}
+
+    .branding {height: auto;}
+
+    .logo {width: 25.9rem; height: 4.1rem;}
+
+    .gnb {padding-top: 7.5rem;}
+    .gnb ul.depth01 {height: calc(100vh - 7.5rem);}
+    .gnb ul.depth01 > li > a {font-size: 1.7rem; line-height: 1.177; padding: 1.6rem 0;}
+
+    .gnb ul.depth02 {padding: 0.8rem 0;}
+    .gnb ul.depth02 > li > a {padding: 0.4rem 1.5rem; font-size: 1.7rem;}
+
+    .btn-menu {width: 3.2rem; height: 3rem;}
+    .btn-close {width: 2.6rem; height: 2.6rem; left: 3rem; top: 2.4rem;}
 }
