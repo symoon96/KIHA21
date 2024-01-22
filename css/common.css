@@ -45,10 +45,6 @@
 .gnb ul.depth02 > li.on > a {color: #ffffff;}
 .gnb ul.depth01 > li.on ul.depth02 {height: 6rem;}
 .gnb ul.depth01 > li.on ul.depth02.highlight {height: 0;}
-/* .gnb ul.depth02 {position: absolute; top: 100%;} */
-/* .gnb ul.depth02 {position: absolute; display: none; align-items: center; justify-content: center; background-color: #313131; width: 100vw; left: 50%; top:100%; transform: translateX(-50%);}
-
-.gnb ul.depth01 > li.on > ul.depth02 {display: flex;} */
 
 .btn-menu {width: 3.2rem; height: 3rem; background: url('../img/icon/ic_menu.png') no-repeat center; background-size: 100%; position: absolute; right: 4rem; top: 50%; transform: translateY(-50%); display: none;}
 
