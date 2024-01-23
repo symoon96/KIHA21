@@ -5,8 +5,13 @@ var magazineSwiper = undefined;
 let prevIdx
 
 $(document).ready(function(){
-    initChangeSwiper();
-    initMagazineSwiper();
+    if($('.change-swiper').length > 0){
+        initChangeSwiper();
+    }
+    if($('.magazine-swiper').length > 0){
+        initMagazineSwiper();
+    }    
+    
     $('img[usemap]').rwdImageMaps();
 
     AOS.init();
@@ -402,8 +407,12 @@ $(window).on('resize', function () {
             $('body').css('overflow', '')
         }
     }
-    initChangeSwiper();
-    initMagazineSwiper();
+    if($('.change-swiper').length > 0){
+        initChangeSwiper();
+    }
+    if($('.magazine-swiper').length > 0){
+        initMagazineSwiper();
+    }
 });
 
 function initChangeSwiper() {
