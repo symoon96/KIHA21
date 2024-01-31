@@ -10,8 +10,13 @@ $(document).ready(function(){
     }
     if($('.magazine-swiper').length > 0){
         initMagazineSwiper();
+<<<<<<< HEAD
     }
 
+=======
+    }    
+    
+>>>>>>> 9b7291f3c040c035d25f57ac2456b0a4a8e3f8bc
     $('img[usemap]').rwdImageMaps();
 
     AOS.init();

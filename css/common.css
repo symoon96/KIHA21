@@ -177,11 +177,12 @@
     .btn-menu {width: 5.2rem; height: 4.7rem;}
     .btn-close {width: 4.2rem; height: 4.2rem; left: 4.5rem; top: 3.9rem;}
 }
-
-@media (orientation: landscape) and (max-width: 750px) {
+/*
+@media (orientation: landscape) and (max-width: 750px){
     /*-------------------------------------------------------------------
         @header
     -------------------------------------------------------------------*/
+/*
     #header {height: 7.5rem;}
     #header .container {height: 7.5rem;}
 
@@ -200,4 +201,4 @@
 
     .btn-menu {width: 3.2rem; height: 3rem;}
     .btn-close {width: 2.6rem; height: 2.6rem; left: 3rem; top: 2.4rem;}
-}
+}*/
