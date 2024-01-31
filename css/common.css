@@ -119,7 +119,7 @@
         @header
     -------------------------------------------------------------------*/
     #header {height: 7.5rem;}
-    #header .container {max-width: 100vw; height: 7.5rem; position: fixed; z-index: 9; left: 0; top: 0; background-color: #ffffff;}
+    #header .container {max-width: 100vw; height: 7.5rem; position: fixed; z-index: 9; left: 0; top: 0; background-color: #ffffff; border-bottom: 1px solid #000000;}
 
     #header.scroll {height: 7.5rem;}
     #header.scroll .branding {height: auto; transform: translateY(0);}

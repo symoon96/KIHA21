@@ -5,8 +5,13 @@ var magazineSwiper = undefined;
 let prevIdx
 
 $(document).ready(function(){
-    initChangeSwiper();
-    initMagazineSwiper();
+    if($('.change-swiper').length > 0){
+        initChangeSwiper();
+    }
+    if($('.magazine-swiper').length > 0){
+        initMagazineSwiper();
+    }
+
     $('img[usemap]').rwdImageMaps();
 
     AOS.init();
@@ -22,22 +27,14 @@ $(document).ready(function(){
 
     $('#fullpage').fullpage({
         responsiveSlides: true,
-        responsiveHeight: 810,
+        responsiveHeight: 840,
         navigation: true,
-        scrollOverflow: true,
+		slidesNavigation: true,
+		scrollOverflow: true,
 		scrollOverflowReset: true,
 
         afterLoad: function(anchorLink, index){
-            // if (index !== 1){
-			// 	$('#header').addClass('scroll')
-			// } else {
-            //     $('#header').removeClass('scroll')
-            // }
-
             if(index == 1) {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section03 .dim').addClass('ani')
-                // }, 500);
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .container > img').addClass('ani')
                 }, 500)
@@ -47,100 +44,77 @@ $(document).ready(function(){
                 setTimeout(() => {
                     aniTarget3.addClass('ani'); 
                 }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget2.removeClass('ani'); 
+                }, 1000);
+                
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget1.removeClass('ani'); 
+                }, 1000);
             } else if(index == 2) {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section02 .dim').addClass('ani')
-                // }, 500);
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget3.removeClass('ani'); 
+                }, 1000);
+
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .container > img').addClass('ani')
                 }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
                 }, 1000);
-                if(!$('.growth #fullpage .section02 .animation-area').hasClass('ani')){
-                    setTimeout(() => {
-                        $('.chart01').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart01').width(),
-                            value: 0.15,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 700,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart02').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart02').width(),
-                            value: 0.285,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 700,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart03').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart03').width(),
-                            value: 0.453,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 700,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart04').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart04').width(),
-                            value: 0.603,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 700,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart05').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart05').width(),
-                            value: 0.744,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 700,
-                                easing: "linear"
-                            },
-                        });
-                    }, 1500);
-                }
-                
+                setTimeout(() => {
+                    aniTarget2.addClass('ani'); 
+                }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget1.removeClass('ani'); 
+                }, 1000);
             } else {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section01 .dim').addClass('ani')
-                // }, 500);
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget3.removeClass('ani'); 
+                }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget2.removeClass('ani'); 
+                }, 1000);
+
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .container > img').addClass('ani')
                 }, 500)
@@ -154,19 +128,13 @@ $(document).ready(function(){
         },
         
         onLeave: function(index, nextIndex, prevIndex, direction){
-            console.log(index, prevIndex);
             if (index == 2 && prevIndex == "up") {
-                console.log('111')
                 $('#header').removeClass('scroll')
             } else {
                 $('#header').addClass('scroll')
             }
 
             if(index == 1) {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section03 .dim').addClass('ani')
-                // }, 500);
-                // $('#header').removeClass('scroll')
                 setTimeout(() => {
                     $('.growth #fullpage .section03 .container > img').addClass('ani')
                 }, 500)
@@ -176,101 +144,77 @@ $(document).ready(function(){
                 setTimeout(() => {
                     aniTarget3.addClass('ani'); 
                 }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget2.removeClass('ani'); 
+                }, 1000);
+                
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget1.removeClass('ani'); 
+                }, 1000);
             } else if(index == 2) {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section02 .dim').addClass('ani')
-                // }, 500);
-				// $('#header').addClass('scroll')
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget3.removeClass('ani'); 
+                }, 1000);
+
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .container > img').addClass('ani')
                 }, 500)
                 setTimeout(() => {
                     $('.growth #fullpage .section02 .animation-area').addClass('ani')
                 }, 1000);
-                if(!$('.growth #fullpage .section02 .animation-area').hasClass('ani')){
-                    setTimeout(() => {
-                        $('.chart01').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart01').width(),
-                            value: 0.15,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 400,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart02').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart02').width(),
-                            value: 0.285,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 400,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart03').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart03').width(),
-                            value: 0.453,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 400,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart04').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart04').width(),
-                            value: 0.603,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 400,
-                                easing: "linear"
-                            },
-                        });
-                        $('.chart05').circleProgress({
-                            startAngle: Math.PI/2 ,
-                            size: $('.chart05').width(),
-                            value: 0.744,
-                            animation: true,
-                            reverse: true,
-                            thickness: $('.chart05').width() * 0.03429,
-                            lineCap:'square',
-                            fill: {color: '#ff0032'},
-                            emptyFill: "rgba(0,0,0,0)",
-                            animation:{
-                                duration: 400,
-                                easing: "linear"
-                            },
-                        });
-                    }, 1000);
-                }
+                setTimeout(() => {
+                    aniTarget2.addClass('ani'); 
+                }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section01 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget1.removeClass('ani'); 
+                }, 1000);
             } else {
-                // setTimeout(() => {
-                //     $('.growth #fullpage .section01 .dim').addClass('ani')
-                // }, 500);
-				// $('#header').addClass('scroll')
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section03 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget3.removeClass('ani'); 
+                }, 1000);
+
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .container > img').removeClass('ani')
+                }, 500)
+                setTimeout(() => {
+                    $('.growth #fullpage .section02 .animation-area').removeClass('ani')
+                }, 1000);
+                setTimeout(() => {
+                    aniTarget2.removeClass('ani'); 
+                }, 1000);
+
                 setTimeout(() => {
                     $('.growth #fullpage .section01 .container > img').addClass('ani')
                 }, 500)
@@ -402,8 +346,12 @@ $(window).on('resize', function () {
             $('body').css('overflow', '')
         }
     }
-    initChangeSwiper();
-    initMagazineSwiper();
+    if($('.change-swiper').length > 0){
+        initChangeSwiper();
+    }
+    if($('.magazine-swiper').length > 0){
+        initMagazineSwiper();
+    }
 });
 
 function initChangeSwiper() {
@@ -425,7 +373,7 @@ function initChangeSwiper() {
         // if($('.change .change-swiper .swiper .swiper-wrapper .swiper-slide.bg').length > 0){
         //     changeSwiper.appendSlide('<div class="swiper-slide"><div class="img-wrap"><img src="../img/sub/img_change03_05_pc02.png" alt=""></div><div class="caption-wrap"></div></div>')
         // }
-    } else if (windowWidth <= 750 && changeSwiper != undefined) {
+    } else if (windowWidth <= 1170 && changeSwiper != undefined) {
         changeSwiper.destroy();
         changeSwiper = undefined;
 

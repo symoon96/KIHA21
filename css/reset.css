@@ -33,7 +33,7 @@ button{ background: none; color: inherit; font-size: inherit; box-shadow: none; 
 /* Box sizing rules */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after { box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
 /* Remove default padding */
 ul[class],
