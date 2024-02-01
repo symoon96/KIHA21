@@ -464,9 +464,11 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 
     .change .magazine-swiper {padding-left: 0; padding-right: 0;}
     .change .magazine-swiper .inner {padding: 0; border: 0;}    
-    .change .magazine-swiper .inner .swiper .swiper-wrapper {gap: 8rem 4.4rem; flex-wrap: wrap;}
-    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {width: calc(33.3334% - 2rem); padding: 0;}
+    .change .magazine-swiper .inner .swiper .swiper-wrapper {gap: 8rem 4.5rem; flex-wrap: wrap;}
+    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {width: calc(33.3334% - 3rem); padding: 0;}
     .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide .text {font-size: 2.1rem; margin-top: 1.2rem}
+    .change .magazine-swiper .swiper-pagination {display: none;}
+    .change .magazine-swiper [class^="swiper-button-"] {display: none;}
 
  
     
