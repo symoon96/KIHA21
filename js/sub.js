@@ -438,7 +438,7 @@ function popViewMessage(target){
     })
     
     if(!$(window).scrollTop() > 0) {
-        $(window).scrollTop($('.message .congrats').offset.top())
+        $(window).scrollTop($('.message .congrats').scrollTop())
         // $('.message .congrats .pop-view').css('padding-top', $('#header').height() + 60)
     } else {
         $('.message .congrats .pop-view').css('padding-top', $('#header').height() + 60)
