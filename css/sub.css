@@ -562,6 +562,9 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .change .magazine-swiper {padding-left: 0; padding-right: 0;}
     .change .magazine-swiper .inner {padding: 0; border: 0;}
 .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide .text {font-size: 1.4rem; margin-top: 0.8rem}
+    .change .magazine-swiper .inner .swiper .swiper-wrapper {gap: 5.5rem 3rem;}
+    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {width: calc(33.3334% - 2rem);}
+
     
     
     /* 함께 하는 축하메시지 > 회장 메시지 */
