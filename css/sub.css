@@ -461,10 +461,17 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .change .change-swiper .swiper .swiper-wrapper .swiper-slide:nth-child(even) .caption-wrap {text-align: left;}
     .change .change-swiper [class^="swiper-button-"] {display: none;}
     .change .change-swiper .swiper-pagination {display: none;}
-    
-    .change .magazine-swiper .inner .swiper .swiper-wrapper {gap: 8rem 4.4rem;}
-    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {width: calc(50% - 2.2rem);}
+
+    .change .magazine-swiper {padding-left: 0; padding-right: 0;}
+    .change .magazine-swiper .inner {padding: 0; border: 0;}    
+    .change .magazine-swiper .inner .swiper .swiper-wrapper {gap: 8rem 4.4rem; flex-wrap: wrap;}
+    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {width: calc(33.3334% - 2rem); padding: 0;}
     .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide .text {font-size: 2.1rem; margin-top: 1.2rem}
+
+ 
+    
+    
+
 
     /* 함께 하는 축하메시지 > 회장 메시지 */
     .message .greeting {max-width: none; margin: 0 -4rem; width: calc(100% + 8rem); padding-top: 6rem; padding-bottom: 6rem;}
@@ -549,13 +556,12 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .change {padding-top: 13.5rem; padding-bottom: 6rem;}
     .change .change-swiper .swiper .swiper-wrapper .swiper-slide .caption-wrap .year span {font-size: 4.2rem;}
     .change .change-swiper .swiper .swiper-wrapper .swiper-slide .caption-wrap .text {font-size: 2.1rem;}
-    
-    .change .magazine-swiper {padding-left: 0; padding-right: 0;}
-    .change .magazine-swiper .inner {padding: 0; border: 0;}
-    .change .magazine-swiper .inner .swiper .swiper-wrapper {flex-wrap: wrap; gap: 5.5rem 3rem;}
-    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide {padding: 0; width: calc(33.3334% - 2rem);}
-    .change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide .text {font-size: 1.4rem; margin-top: 0.8rem}
 
+.change .magazine-swiper {padding-left: 0; padding-right: 0;}
+    .change .magazine-swiper .inner {padding: 0; border: 0;}
+.change .magazine-swiper .inner .swiper .swiper-wrapper .swiper-slide .text {font-size: 1.4rem; margin-top: 0.8rem}
+    
+    
     /* 함께 하는 축하메시지 > 회장 메시지 */
     .message .greeting {padding-top: 9.4rem; padding-bottom: 9.4rem;}
     .message .greeting .cont {padding: 9rem 4rem 9rem;}
