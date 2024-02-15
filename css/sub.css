@@ -113,7 +113,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .history .history-detail:nth-of-type(10) .cont .inner ul li:nth-of-type(2) dl dd .img-area::before {width: 21.5rem; left: 4rem}
 .history .history-detail:nth-of-type(12) .cont {padding-bottom: 18.2rem;}
 .history .history-detail:nth-of-type(14) .cont {padding-bottom: 11rem;}
-.history .history-detail:nth-of-type(16) .cont {padding-bottom: 36rem;}
+.history .history-detail:nth-of-type(16) .cont {padding-bottom: 54rem;}
 
 /* 어제와 오늘 */
 .change {padding-top: 11.5rem; padding-bottom: 6rem;}
@@ -385,7 +385,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .history .history-detail:nth-of-type(10) .cont,
     .history .history-detail:nth-of-type(12) .cont,
     .history .history-detail:nth-of-type(14) .cont {padding-bottom: 7rem;}
-    .history .history-detail:nth-of-type(16) .cont {padding-bottom: 32rem;}
+    /* .history .history-detail:nth-of-type(16) .cont {padding-bottom: 32rem;} */
     
     /* .history .history-detail.on .visual .inner {width: 50%;} */
 }
@@ -446,7 +446,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 
     .history .history-detail.on .visual .inner {position: static; width: 100%; height: auto;}
     
-    .history .history-detail:nth-of-type(16) .cont {padding-bottom: 35rem;}
+    /* .history .history-detail:nth-of-type(16) .cont {padding-bottom: 35rem;} */
 
     /* 어제와 오늘 */
     .change {padding-top: 9rem; padding-bottom: 6rem;}
@@ -552,7 +552,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     
     #header.scroll + .sub .timeline {top: 12rem;}
     
-    .history .history-detail:nth-of-type(16) .cont {padding-bottom: 48vh;}
+    /* .history .history-detail:nth-of-type(16) .cont {padding-bottom: 48vh;} */
 
     /* 어제와 오늘 */
     .change {padding-top: 13.5rem; padding-bottom: 6rem;}
