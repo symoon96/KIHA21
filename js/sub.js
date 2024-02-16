@@ -284,6 +284,16 @@ $(document).ready(function(){
         }
 
         prevIdx = currentIdx
+
+        if(scrolltop >= $(document).height() - ($(window).innerHeight())){
+            setTimeout(() => {
+                $('.history .history-detail:last-child .cont .inner ul li dl').each(function(){
+                    if(!$(this).hasClass('aos-animate')){
+                        $(this).addClass('aos-animate');
+                    }
+                })
+            }, 100);
+        }
     })
 
     messageSet();
