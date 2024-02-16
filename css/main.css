@@ -24,7 +24,6 @@
 .main .section01{}
 
 @media screen and (max-width: 1170px) {
-    .main .visual .visual-text {background-color: rgba(0, 0, 0, 0.5);}
     .main .visual .visual-background *.pc {display: none;}
     .main .visual .visual-background *.mobile {display: block;}
     .main .visual .visual-background .visual-swiper {width: 100%; height: calc(100vh - 7.5rem);}
