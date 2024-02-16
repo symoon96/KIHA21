@@ -113,7 +113,6 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .history .history-detail:nth-of-type(10) .cont .inner ul li:nth-of-type(2) dl dd .img-area::before {width: 21.5rem; left: 4rem}
 .history .history-detail:nth-of-type(12) .cont {padding-bottom: 18.2rem;}
 .history .history-detail:nth-of-type(14) .cont {padding-bottom: 11rem;}
-.history .history-detail:nth-of-type(16) .cont {padding-bottom: 54rem;}
 
 /* 어제와 오늘 */
 .change {padding-top: 11.5rem; padding-bottom: 6rem;}
