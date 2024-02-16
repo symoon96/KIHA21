@@ -22,7 +22,11 @@ $(document).ready(function(){
             }
             $('.gnb ul.depth01 > li').removeClass('on')
         }, function(){
-            $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on')
+            if(correctGnb <= 0){
+                $('.gnb ul.depth01 > li').removeClass('on')
+            } else {
+                $('.gnb ul.depth01 > li).eq(correctGnb).addClass('on');
+            }
         })
     }
 
@@ -43,7 +47,11 @@ $(document).ready(function(){
             $('.gnb ul.depth01 > li').hover(function(){
                 $('.gnb ul.depth01 > li').removeClass('on')
             }, function(){
-                $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on')
+                if(correctGnb <= 0){
+                    $('.gnb ul.depth01 > li').removeClass('on')
+                } else {
+                    $('.gnb ul.depth01 > li).eq(correctGnb).addClass('on');
+                }
             })
         }
     })
