@@ -25,7 +25,7 @@ $(document).ready(function(){
             if(correctGnb <= 0){
                 $('.gnb ul.depth01 > li').removeClass('on')
             } else {
-                $('.gnb ul.depth01 > li).eq(correctGnb).addClass('on');
+                $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
             }
         })
     }
@@ -50,7 +50,7 @@ $(document).ready(function(){
                 if(correctGnb <= 0){
                     $('.gnb ul.depth01 > li').removeClass('on')
                 } else {
-                    $('.gnb ul.depth01 > li).eq(correctGnb).addClass('on');
+                    $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
                 }
             })
         }
