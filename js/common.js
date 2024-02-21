@@ -17,13 +17,14 @@ $(document).ready(function(){
         }
 
         $('.gnb ul.depth01 > li').hover(function(){
-            if(correctGnb == 0 && $(this).index() == 0) {
+            if($(this).index() == 0) {
                 $(this).find('.depth02').hide();
             }
             $('.gnb ul.depth01 > li').removeClass('on')
         }, function(){
             if(correctGnb <= 0){
                 $('.gnb ul.depth01 > li').removeClass('on')
+                $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
             } else {
                 $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
             }
@@ -45,10 +46,14 @@ $(document).ready(function(){
             }
 
             $('.gnb ul.depth01 > li').hover(function(){
+                if($(this).index() == 0) {
+                    $(this).find('.depth02').hide();
+                }
                 $('.gnb ul.depth01 > li').removeClass('on')
             }, function(){
                 if(correctGnb <= 0){
                     $('.gnb ul.depth01 > li').removeClass('on')
+                    $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
                 } else {
                     $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
                 }
