@@ -228,6 +228,10 @@ $(document).ready(function(){
         }
     });
 
+    $('.growth #fullpage .container').each(function(){
+        $(this).css('height', $(this).parents('div').innerHeight());
+    })
+
     $('.timeline ul li a').click(function(){
         $('html').animate({scrollTop: $('.history-headline').eq($(this).closest('li').index()).offset().top - $('#header').height()}, 1000)
     })
@@ -362,6 +366,10 @@ $(window).on('resize', function () {
     if($('.magazine-swiper').length > 0){
         initMagazineSwiper();
     }
+
+    $('.growth #fullpage .container').each(function(){
+        $(this).css('height', $(this).parents('div').innerHeight());
+    })
 });
 
 function initChangeSwiper() {
