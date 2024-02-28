@@ -21,7 +21,7 @@ $(document).ready(function(){
         }
 
         $('.gnb ul.depth01 > li').hover(function(){
-            $('.gnb ul.depth01 > li').removewClass('on');
+            $('.gnb ul.depth01 > li').removeClass('on');
             $(this).addClass('on');
 
             if(correctGnb == 0){
@@ -52,7 +52,7 @@ $(document).ready(function(){
         }
 
         $('.gnb ul.depth01 > li').hover(function(){
-            $('.gnb ul.depth01 > li').removewClass('on');
+            $('.gnb ul.depth01 > li').removeClass('on');
             $(this).addClass('on');
 
             if(correctGnb == 0){
