@@ -30,6 +30,9 @@ $(document).ready(function(){
         }, function(){
                 $('.gnb ul.depth01 > li').removeClass('on')
                 $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
+                if(correctGnb < 0){
+                    $('.gnb ul.depth01 > li').removeClass('on')
+                }
         })
     }
 
@@ -61,6 +64,9 @@ $(document).ready(function(){
         }, function(){
                 $('.gnb ul.depth01 > li').removeClass('on')
                 $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
+                if(correctGnb < 0){
+                    $('.gnb ul.depth01 > li').removeClass('on')
+     l          }
         })
         }
     })
