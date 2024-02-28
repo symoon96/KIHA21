@@ -123,7 +123,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide:nth-child(even) .caption-wrap {text-align: right;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .img-wrap {height: 0; width: 100%; padding-top: 75.526%; position: relative; overflow: hidden;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .img-wrap img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); object-fit: cover; width: 100%; height: 100%;}
-.change .change-swiper .swiper .swiper-wrapper .swiper-slide.full .img-wrap {height: 0; width: 100%; padding-top: 37.763%; position: relativee; overflow: hidden;}
+.change .change-swiper .swiper .swiper-wrapper .swiper-slide.full .img-wrap {height: 0; width: 100%; padding-top: 37.763%; position: relative; overflow: hidden;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .caption-wrap .year {}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .caption-wrap .year span {display: inline-block; font-family: 'Gotham'; position: relative; font-size: 3rem; font-weight: 100; line-height: 1.7334;}
 .change .change-swiper .swiper .swiper-wrapper .swiper-slide .caption-wrap .year span::after {content: ""; width: 100%; height: 0.3rem; background-color: #cc1313; position: absolute; left:0; bottom: 0;}
