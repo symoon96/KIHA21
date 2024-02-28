@@ -16,18 +16,20 @@ $(document).ready(function(){
             $('html, body').animate({scrollTop: scrollTop-59}, 500);
         }
 
+        if(correctGnb == 0){
+            $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
+        }
+
         $('.gnb ul.depth01 > li').hover(function(){
-            if($(this).index() == 0) {
-                $(this).find('.depth02').hide();
+            $('.gnb ul.depth01 > li').removewClass('on');
+            $(this).addClass('on');
+
+            if(correctGnb == 0){
+                $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0)
             }
-            $('.gnb ul.depth01 > li').removeClass('on')
         }, function(){
-            if(correctGnb <= 0){
                 $('.gnb ul.depth01 > li').removeClass('on')
                 $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
-            } else {
-                $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
-            }
         })
     }
 
@@ -45,19 +47,21 @@ $(document).ready(function(){
                 $('html, body').animate({scrollTop: scrollTop-59}, 500);
             }
 
-            $('.gnb ul.depth01 > li').hover(function(){
-                if($(this).index() == 0) {
-                    $(this).find('.depth02').hide();
-                }
+        if(correctGnb == 0){
+            $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
+        }
+
+        $('.gnb ul.depth01 > li').hover(function(){
+            $('.gnb ul.depth01 > li').removewClass('on');
+            $(this).addClass('on');
+
+            if(correctGnb == 0){
+                $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0)
+            }
+        }, function(){
                 $('.gnb ul.depth01 > li').removeClass('on')
-            }, function(){
-                if(correctGnb <= 0){
-                    $('.gnb ul.depth01 > li').removeClass('on')
-                    $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
-                } else {
-                    $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
-                }
-            })
+                $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
+        })
         }
     })
 
