@@ -129,7 +129,7 @@
     .branding {height: 7.5rem;}
     .branding .headline {display: none;}
 
-    .gnb {position: fixed; width: 55rem; right: 0; top: 0; padding-top: 7.5rem; min-height: 100vh; z-index: 999; background-color: #ffffff; transform: translateX(100%); transition: all 0.3s; margin-top: 0;}
+    .gnb {position: fixed; width: 55rem; right: 0; top: 0; padding-top: 7.5rem; /*min-height: 100vh;*/ z-index: 999; background-color: #ffffff; transform: translateX(100%); transition: all 0.3s; margin-top: 0;}
     .gnb::before {display: none;}
     .gnb .container {position: static !important; height: auto !important;}
     .gnb ul.depth01 {overflow: auto; height: calc(100vh - 7.5rem); display: block; /*padding: 0 4.5rem;*/}

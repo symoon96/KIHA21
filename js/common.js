@@ -22,6 +22,14 @@ $(document).ready(function(){
         subNav();
         gnbHover()
 
+        $('.gnb').css({
+            'transform': '',
+            'height' : ''
+        });
+        $('.gnb ul.depth01').css({
+            'height' : ''
+        });
+
         if(correctGnb == 0){
             $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
         }
@@ -58,24 +66,32 @@ $(document).ready(function(){
             subNav();
             gnbHover();
 
-        if(correctGnb == 0){
-            $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
-        }
-
-        $('.gnb ul.depth01 > li').hover(function(){
-            $('.gnb ul.depth01 > li').removeClass('on');
-            $(this).addClass('on');
+            $('.gnb').css({
+                'transform': '',
+                'height' : ''
+            });
+            $('.gnb ul.depth01').css({
+                'height' : ''
+            });
 
             if(correctGnb == 0){
-                $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0)
+                $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
             }
-        }, function(){
+
+            $('.gnb ul.depth01 > li').hover(function(){
+                $('.gnb ul.depth01 > li').removeClass('on');
+                $(this).addClass('on');
+
+                if(correctGnb == 0){
+                    $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0)
+                }
+            }, function(){
                 $('.gnb ul.depth01 > li').removeClass('on')
                 $('.gnb ul.depth01 > li').eq(correctGnb).addClass('on');
                 if(correctGnb < 0){
                     $('.gnb ul.depth01 > li').removeClass('on')
-     l          }
-        })
+                }
+            })
         }
     })
 
@@ -111,9 +127,6 @@ function openMenu(){
             'transform': 'translateX(0)',
             'height' : windowHeight
         });
-        // $('.gnb .container').css({
-        //     'max-height' : windowHeight
-        // });
         $('.gnb ul.depth01').css({
             'height' : windowHeight - parseInt($('.gnb').css('padding-top').replace('px', ''))
         });
