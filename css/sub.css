@@ -493,7 +493,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .message .congrats img {margin: 0 auto;}
 
     /* 숫자로 보는 KIHA */
-    .growth #fullpage .section {min-height: 100vh;}
+    /* .growth #fullpage .section {min-height: 100vh;} */
 
     .growth #fullpage .section01 .container {padding-top: 0; padding-bottom: 0;}
     .growth #fullpage .section01 .container > img {width: 62rem;}
