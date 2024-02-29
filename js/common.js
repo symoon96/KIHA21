@@ -111,8 +111,11 @@ function openMenu(){
             'transform': 'translateX(0)',
             'height' : windowHeight
         });
-        $('#header .container').css({
-            'height' : windowHeight
+        $('.gnb .container').css({
+            'max-height' : windowHeight
+        });
+        $('.gnb ul.depth01').css({
+            'height' : windowHeight - parseInt($('.gnb').css('padding-top').replace('px', ''))
         });
 
 
