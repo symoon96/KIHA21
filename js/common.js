@@ -111,6 +111,10 @@ function openMenu(){
             'transform': 'translateX(0)',
             'height' : windowHeight
         });
+        $('#header .container').css({
+            'height' : windowHeight
+        });
+
 
         dimMakerinHeader()
     })
