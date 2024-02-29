@@ -6,15 +6,16 @@ $(document).ready(function(){
 
     let correctGnb = $('.gnb ul.depth01 > li.on').index()
 
+    if(urlParams.get('s')) {
+            const scrollTop = $('.'+urlParams.get('s')).offset().top;
+            $('html, body').animate({scrollTop: scrollTop-parseInt($('.timeline').css('top').replace('px', ''))}, 500);
+        }
+
     if(windowWidth <= 1170) {
         gnb()
     } else {
         subNav();
         gnbHover()
-        if(urlParams.get('s')) {
-            const scrollTop = $('.'+urlParams.get('s')).offset().top;
-            $('html, body').animate({scrollTop: scrollTop-59}, 500);
-        }
 
         if(correctGnb == 0){
             $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
@@ -38,17 +39,16 @@ $(document).ready(function(){
 
     $(window).resize(function(){
         windowWidth = window.innerWidth;
+        if(urlParams.get('s')) {
+            const scrollTop = $('.'+urlParams.get('s')).offset().top;
+            $('html, body').animate({scrollTop: scrollTop-parseInt($('.timeline').css('top').replace('px', ''))}, 500);
+        }
 
         if(windowWidth <= 1170) {
             gnb()
         } else {
             subNav();
             gnbHover();
-
-            if(urlParams.get('s')) {
-                const scrollTop = $('.'+urlParams.get('s')).offset().top;
-                $('html, body').animate({scrollTop: scrollTop-59}, 500);
-            }
 
         if(correctGnb == 0){
             $('.gnb ul.depth01 > li').eq(correctGnb).find('.depth02').css('height', 0);
