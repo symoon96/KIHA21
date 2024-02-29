@@ -199,7 +199,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .growth #fullpage .container .animation-area.ani {opacity: 1;}
 .growth #fullpage .container > img {opacity: 0;}
 .growth #fullpage .container > img.ani {animation: slide-up-fade-in ease 1s; animation-iteration-count: 1; transform-origin: 50% 50%; animation-fill-mode:forwards;}
-/* .growth #fullpage .section {min-height: 100vh;} */
+.growth #fullpage .section {min-height: 100vh;}
 .growth #fullpage .section .dim {width: 100vw; height: 100%; position: absolute; left: 0; top: 0; background: #000000; opacity: 0.5; z-index: 1;}
 .growth #fullpage .section .dim.ani {}
 
@@ -266,7 +266,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 .growth #fullpage .section02 .animation-area .bar-chart .bar04.ani {width: 46%;}
 .growth #fullpage .section02 .animation-area .bar-chart .bar05.ani {width: 78.5%;}
 
-.growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover; padding-top: 13.2rem; padding-bottom: 6rem; min-height: 100vh;}
+.growth #fullpage .section03 {background: url('../img/sub/bg_growth03.png') no-repeat center; background-size: cover; padding-top: 13.2rem; padding-bottom: 6rem;}
 .growth #fullpage .section03 .container {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 3.5rem 0; position: relative;}
 .growth #fullpage .section03 .container .animation-area {width: 100%}
 .growth #fullpage .section03 .animation-area .bar-chart {position: relative; background: url('../img/sub/bg_growth03_02.png') no-repeat center; background-size: 100%; width: 62.8rem; height: 48.4rem; margin: 0 auto;}
@@ -493,7 +493,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .message .congrats img {margin: 0 auto;}
 
     /* 숫자로 보는 KIHA */
-    /* .growth #fullpage .section {min-height: 100vh;} */
+    .growth #fullpage .section {min-height: 100vh;}
 
     .growth #fullpage .section01 .container {padding-top: 0; padding-bottom: 0;}
     .growth #fullpage .section01 .container > img {width: 62rem;}
