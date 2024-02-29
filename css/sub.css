@@ -501,12 +501,14 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .growth #fullpage .section {min-height: 100vh;}
 
     /* .growth #fullpage .section01 .container {padding-top: 0; padding-bottom: 0;} */
+    .growth #fullpage .section01 {padding-top: 7.5rem;}
     .growth #fullpage .section01 .container > img {width: 62rem;}
     .growth #fullpage .section01 .animation-area .line-chart {width: 67.1rem; height: 40.5rem;}
     .growth #fullpage .section01 .animation-area .line-chart .line img {width: 67.1rem;}
     /* .growth #fullpage .section01 .animation-area .line-chart [class^="text"] {font-size: 1.4rem;} */
 
     /* .growth #fullpage .section02 .container {padding-top: 0; padding-bottom: 0;} */
+    .growth #fullpage .section02 {padding-top: 7.5rem;}
     .growth #fullpage .section02 .container > img {width: 62rem;}
     .growth #fullpage .section02 .animation-area .bar-chart {width: 67.1rem; height: 31.8rem;}
     /* .growth #fullpage .section02 .animation-area .bar-chart [class^="text"] {font-size: 1.4rem;} */
@@ -588,6 +590,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
 
     /* 숫자로 보는 KIHA */
     /* .growth #fullpage .section01 .container {gap: 19.5rem 0;} */
+    .growth #fullpage .section01 {padding-top: 12rem;}
     .growth #fullpage .section01 .container > img {width: 62rem;}
     .growth #fullpage .section01 .animation-area .line-chart {width: 67rem; height: 40.4rem;}
     .growth #fullpage .section01 .animation-area .line-chart .line img {width: 67rem;}
@@ -599,6 +602,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     .growth #fullpage .section02 .animation-area .bar-chart [class^="text"] {font-size: 2rem;}
 
     /* .growth #fullpage .section03 .container {gap: 17rem 0;} */
+    .growth #fullpage .section03 {padding-top: 12rem;}
     .growth #fullpage .section03 .container > img {width: 62rem;}
     .growth #fullpage .section03 .animation-area .bar-chart {width: 67rem; height: 51.4rem;}
     .growth #fullpage .section03 .animation-area .bar-chart [class^="text"] {font-size: 2rem;}
