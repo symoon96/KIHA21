@@ -495,7 +495,7 @@ body:has(.history) #footer {position: relative; z-index: 1; background-color: #f
     /* 숫자로 보는 KIHA */
     .growth #fullpage .section {min-height: 100vh;}
 
-    .growth #fullpage .section01 .container {padding-top: 0; padding-bottom: 0;}
+    /* .growth #fullpage .section01 .container {padding-top: 0; padding-bottom: 0;} */
     .growth #fullpage .section01 .container > img {width: 62rem;}
     .growth #fullpage .section01 .animation-area .line-chart {width: 67.1rem; height: 40.5rem;}
     .growth #fullpage .section01 .animation-area .line-chart .line img {width: 67.1rem;}
