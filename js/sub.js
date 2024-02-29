@@ -229,7 +229,7 @@ $(document).ready(function(){
     });
 
     $('.growth #fullpage .container').each(function(){
-        $(this).css('height', $(this).parents('div').innerHeight());
+        $(this).css('max-height', $(this).parents('div').innerHeight());
     })
 
     $('.timeline ul li a').click(function(){
@@ -368,7 +368,7 @@ $(window).on('resize', function () {
     }
 
     $('.growth #fullpage .container').each(function(){
-        $(this).css('height', $(this).parents('div').innerHeight());
+        $(this).css('max-height', $(this).parents('div').innerHeight());
     })
 });
 
