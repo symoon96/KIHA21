@@ -1,5 +1,10 @@
+var windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+
 $(document).ready(function(){
     let windowWidth = window.innerWidth;
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
 
     const url = new URL(window.location);
     const urlParams = url.searchParams;
@@ -39,6 +44,9 @@ $(document).ready(function(){
 
     $(window).resize(function(){
         windowWidth = window.innerWidth;
+        windowWidth = window.innerWidth;
+        windowHeight = window.innerHeight;
+
         if(urlParams.get('s')) {
             const scrollTop = $('.'+urlParams.get('s')).offset().top;
             $('html, body').animate({scrollTop: scrollTop-parseInt($('.timeline').css('top').replace('px', ''))}, 500);
@@ -99,7 +107,10 @@ function gnb(){
 // 메뉴 열기
 function openMenu(){
     $('.btn-menu').click(function(){
-        $('.gnb').css('transform', 'translateX(0)');
+        $('.gnb').css({
+            'transform': 'translateX(0)',
+            'height' : windowHeight
+        });
 
         dimMakerinHeader()
     })
